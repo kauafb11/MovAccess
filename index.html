@@ -106,8 +106,9 @@
                 <p class="section-subtitle">Escolha o plano ideal para impulsionar sua presença digital no esporte inclusivo.</p>
             </div>
             
-            <div class="plans-grid">
-                <div class="plan-card fade-in">
+            <div class="plans-grid" id="plansCarousel" aria-label="Planos">
+                <div class="plans-track" tabindex="0">
+                <div class="plan-card fade-in" data-plan="basico">
                     <div class="plan-header">
                         <div class="plan-icon">
                             <i class="fas fa-rocket"></i>
@@ -130,7 +131,7 @@
                     </div>
                 </div>
                 
-                <div class="plan-card featured fade-in">
+                <div class="plan-card featured fade-in" data-plan="profissional">
                     <div class="plan-badge">Mais Popular</div>
                     <div class="plan-header">
                         <div class="plan-icon">
@@ -155,7 +156,7 @@
                     </div>
                 </div>
                 
-                <div class="plan-card fade-in">
+                <div class="plan-card fade-in" data-plan="premium">
                     <div class="plan-header">
                         <div class="plan-icon">
                             <i class="fas fa-crown"></i>
@@ -179,7 +180,7 @@
                     </div>
                 </div>
                 
-                <div class="plan-card corporate fade-in">
+                <div class="plan-card corporate fade-in" data-plan="corporativo">
                     <div class="plan-header">
                         <div class="plan-icon">
                             <i class="fas fa-building"></i>
@@ -201,7 +202,12 @@
                         <p class="plan-pitch">Impulsione o marketing esportivo da sua organização com estratégias baseadas em IA.</p>
                         <button class="plan-button corporate-btn">Saiba mais</button>
                     </div>
-                </div>
+                </div> <!-- .plans-track -->
+
+                <button class="plans-nav plans-prev" aria-label="Anterior" disabled>&lt;</button>
+                <button class="plans-nav plans-next" aria-label="Próximo">&gt;</button>
+
+                <div class="plans-dots" aria-hidden="false"></div>
             </div>
         </div>
     </section>
@@ -218,7 +224,10 @@
             <!-- Destaques Recentes -->
             <div class="comms-highlights fade-in" aria-label="Destaques Recentes">
                 <article class="comms-highlight-card">
-                    <div class="comms-highlight-media"><img src="img/atletismo.jpg" alt="Atletas em destaque" loading="lazy"></div>
+                    <div class="comms-highlight-media highlight-media">
+                        <img data-src="img/atletismo.jpg" alt="Atletas em destaque" class="lazy" loading="lazy">
+                        <div class="media-overlay" aria-hidden="true"></div>
+                    </div>
                     <div class="comms-highlight-body">
                         <div class="comms-highlight-title">Atletas em foco: novas campanhas</div>
                         <p class="comms-highlight-desc">Campanhas colaborativas ampliam alcance, fortalecem marcas pessoais e abrem portas a patrocínios.</p>
@@ -226,7 +235,10 @@
                     </div>
                 </article>
                 <article class="comms-highlight-card">
-                    <div class="comms-highlight-media"><img src="img/judo.jpg" alt="Tecnologia no esporte" loading="lazy"></div>
+                    <div class="comms-highlight-media highlight-media">
+                        <img data-src="img/judo.jpg" alt="Tecnologia no esporte" class="lazy" loading="lazy">
+                        <div class="media-overlay" aria-hidden="true"></div>
+                    </div>
                     <div class="comms-highlight-body">
                         <div class="comms-highlight-title">Tecnologia e inclusão</div>
                         <p class="comms-highlight-desc">IA e análise de dados ajudam a criar conteúdo acessível, mensurável e de alto impacto.</p>
@@ -234,7 +246,10 @@
                     </div>
                 </article>
                 <article class="comms-highlight-card">
-                    <div class="comms-highlight-media"><img src="img/tenis.jpeg" alt="Eventos esportivos" loading="lazy"></div>
+                    <div class="comms-highlight-media highlight-media">
+                        <img data-src="img/tenis.jpeg" alt="Eventos esportivos" class="lazy" loading="lazy">
+                        <div class="media-overlay" aria-hidden="true"></div>
+                    </div>
                     <div class="comms-highlight-body">
                         <div class="comms-highlight-title">Eventos e oportunidades</div>
                         <p class="comms-highlight-desc">Calendário de eventos traz networking, visibilidade e novas parcerias para atletas e marcas.</p>
@@ -296,7 +311,7 @@
                 </article>
 
                 <article class="comms-card fade-in" data-category="informativos" style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);padding:1.25rem;display:flex;flex-direction:column;gap:.75rem">
-                    <h4 class="comms-title" style="font-size:1.1rem;font-weight:700;color#2a2a2a">Guia de boas práticas de acessibilidade</h4>
+                    <h4 class="comms-title" style="font-size:1.1rem;font-weight:700;color:#2a2a2a">Guia de boas práticas de acessibilidade</h4>
                     <p class="comms-desc" style="color:#666;line-height:1.6">Material prático reúne diretrizes WCAG aplicadas ao esporte, com exemplos visuais.</p>
                     <div class="comms-meta" style="display:flex;gap:1rem;color:#555;font-size:.9rem"><span><i class="fas fa-calendar" aria-hidden="true"></i> 28/10/2025</span><span><i class="fas fa-user" aria-hidden="true"></i> Conteúdo</span></div>
                     <button class="service-btn" type="button" style="margin-top:auto"><span>Ver detalhes</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
@@ -326,17 +341,7 @@
                 </ul>
             </aside>
 
-            <!-- Inscrição para receber novidades -->
-            <div class="comms-subscribe fade-in" aria-live="polite">
-                <h4>Quero Receber Atualizações</h4>
-                <p>Assine para receber novidades sobre comunicações, eventos e campanhas.</p>
-                <form id="comms-subscribe-form">
-                    <input type="text" id="subscribe-name" name="name" placeholder="Seu nome" aria-label="Seu nome" required>
-                    <input type="email" id="subscribe-email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required>
-                    <button type="submit"><i class="fas fa-paper-plane" aria-hidden="true"></i> Assinar</button>
-                </form>
-                <div id="subscribe-message" style="display:none;margin-top:0.75rem;text-align:center;font-family:'Poppins',sans-serif;font-size:0.95rem;border-radius:12px;padding:0.9rem 1rem;"></div>
-            </div>
+            <!-- Subscription removed per request -->
 
             <div id="comms-empty" class="fade-in" style="display:none;text-align:center;color:#666;margin-top:1.5rem">Nenhuma comunicação encontrada.</div>
 
@@ -421,80 +426,25 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+    <!-- Plan modal container -->
+    <div id="plan-modal" class="plan-modal" aria-hidden="true">
+        <div class="plan-modal-backdrop" data-close="true"></div>
+        <div class="plan-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="plan-modal-title">
+            <button class="plan-modal-close" aria-label="Fechar modal" data-close>&times;</button>
+            <div class="plan-modal-body">
+                <h3 id="plan-modal-title"></h3>
+                <p id="plan-modal-desc"></p>
+                <div id="plan-modal-price" class="plan-modal-price"></div>
+                <ul id="plan-modal-features" class="plan-modal-features"></ul>
+                <div class="plan-modal-actions">
+                    <a id="plan-modal-cta" class="cta-button-enhanced" href="#contato">Contratar agora</a>
+                    <button class="plan-modal-secondary" data-close>Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
-        (function () {
-            const planToPage = {
-                'basico': '/planos/basico.html',
-                'profissional': '/planos/profissional.html',
-                'premium': '/planos/premium.html',
-                'corporativo': '/planos/corporativo.html'
-            };
-            function normalizeKey(text) {
-                return (text || '')
-                    .toLowerCase()
-                    .normalize('NFD')
-                    .replace(/[\u0300-\u036f]/g, '');
-            }
-
-            function getPlanNameFromButton(button) {
-                const card = button.closest('.plan-card');
-                if (!card) return null;
-                const heading = card.querySelector('h3');
-                const name = heading && heading.textContent ? heading.textContent.trim().toLowerCase() : null;
-                return name || null;
-            }
-
-            async function checkExists(url) {
-                try {
-                    const response = await fetch(url, { method: 'HEAD' });
-                    return response.ok;
-                } catch (_) {
-                    return false;
-                }
-            }
-
-            function clickEffect(el) {
-                const originalTransform = el.style.transform;
-                const originalTransition = el.style.transition;
-                el.style.transition = (originalTransition ? originalTransition + ', ' : '') + 'transform 120ms ease';
-                el.style.transform = 'scale(0.98)';
-                setTimeout(() => {
-                    el.style.transform = originalTransform;
-                    el.style.transition = originalTransition;
-                }, 140);
-            }
-
-            function setupPlanButtons() {
-                const buttons = document.querySelectorAll('.plan-button');
-                buttons.forEach((btn) => {
-                    if (btn.__planBound) return;
-                    btn.__planBound = true;
-                    btn.addEventListener('click', async (e) => {
-                        e.preventDefault();
-                        clickEffect(btn);
-                        const planName = getPlanNameFromButton(btn);
-                        if (!planName) {
-                            return;
-                        }
-                        const key = normalizeKey(planName);
-                        const targetUrl = planToPage[key];
-                        if (!targetUrl) {
-                            return;
-                        }
-                        const exists = await checkExists(targetUrl);
-                        if (exists) {
-                            window.open(targetUrl, '_blank');
-                        }
-                    }, { passive: true });
-                });
-            }
-
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', setupPlanButtons);
-            } else {
-                setupPlanButtons();
-            }
-        })();
+        <!-- Plan buttons now open an accessible modal handled by script.js -->
 
         // Função para scroll suave até a seção de serviços quando há hash #servicos na URL
         function scrollToServicos() {

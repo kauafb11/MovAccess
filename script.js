@@ -239,17 +239,21 @@ function showNotification(message, type = 'info') {
 // Lazy loading para imagens
 function lazyLoadImages() {
     const images = document.querySelectorAll('img[data-src]');
+    if (!images.length) return;
+    if (!('IntersectionObserver' in window)) {
+        images.forEach(img => { img.src = img.dataset.src; img.classList.remove('lazy'); });
+        return;
+    }
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
                 img.src = img.dataset.src;
-                img.classList.remove('lazy');
+                img.addEventListener('load', () => img.classList.remove('lazy'));
                 imageObserver.unobserve(img);
             }
         });
-    });
-    
+    }, { rootMargin: '200px' });
     images.forEach(img => imageObserver.observe(img));
 }
 
@@ -422,67 +426,166 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-    // Formulário de assinatura de notícias (AJAX)
-    const subscribeForm = document.getElementById('comms-subscribe-form');
-    const subscribeMsg = document.getElementById('subscribe-message');
-    if (subscribeForm) {
-        subscribeForm.addEventListener('submit', async (e) => {
+    // Newsletter subscription removed (section deleted)
+    // Plan modal logic: open details in a modal instead of navigating away
+    const planModal = document.getElementById('plan-modal');
+    const planModalTitle = document.getElementById('plan-modal-title');
+    const planModalDesc = document.getElementById('plan-modal-desc');
+    const planModalPrice = document.getElementById('plan-modal-price');
+    const planModalFeatures = document.getElementById('plan-modal-features');
+    const planModalCta = document.getElementById('plan-modal-cta');
+
+    const PLAN_DETAILS = {
+        basico: {
+            title: 'Básico',
+            desc: 'Ideal para atletas iniciantes que desejam iniciar sua presença digital.',
+            price: 'R$ 299 / mês',
+            cta: '/planos/basico.html',
+            features: ['Criação e otimização de perfis nas redes sociais', '4 postagens mensais', 'Acompanhamento básico de engajamento', 'Relatórios mensais com dados principais']
+        },
+        profissional: {
+            title: 'Profissional',
+            desc: 'Voltado para atletas ativos em competições, que buscam visibilidade e análise de resultados.',
+            price: 'R$ 899 / mês',
+            cta: '/planos/profissional.html',
+            features: ['Gestão completa de redes sociais (até 2 plataformas)', '8 postagens mensais + stories semanais', 'Análise de engajamento com IA preditiva', 'Relatório de desempenho esportivo e digital', 'Consultoria de imagem']
+        },
+        premium: {
+            title: 'Premium',
+            desc: 'Indicado para atletas de alto rendimento ou com patrocinadores.',
+            price: 'R$ 1.799 / mês',
+            cta: '/planos/premium.html',
+            features: ['Gestão de redes sociais (3 plataformas)', 'Produção de conteúdo profissional (foto/vídeo)', 'Monitoramento com IA (análise de sentimentos)', 'Relatórios detalhados', 'Planejamento estratégico e assessoria esportiva']
+        },
+        corporativo: {
+            title: 'Corporativo',
+            desc: 'Soluções completas de marketing e IA para instituições, federações ou patrocinadores.',
+            price: 'A partir de R$ 4.500 / mês',
+            cta: '/planos/corporativo.html',
+            features: ['Campanhas de patrocínio com atletas', 'Dashboards comparativos', 'Consultoria em inclusão', 'Relatórios executivos personalizados', 'Suporte dedicado e consultoria estratégica']
+        }
+    };
+
+    function openPlanModal(key) {
+        const data = PLAN_DETAILS[key];
+        if (!data) return;
+        planModalTitle.textContent = data.title;
+        planModalDesc.textContent = data.desc;
+        planModalPrice.textContent = data.price;
+        planModalFeatures.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
+        planModalCta.setAttribute('href', data.cta);
+        planModal.setAttribute('aria-hidden', 'false');
+        const closeBtn = planModal.querySelector('.plan-modal-close');
+        if (closeBtn) closeBtn.focus();
+    }
+
+    function closePlanModal() {
+        planModal.setAttribute('aria-hidden', 'true');
+    }
+
+    // Attach to buttons
+    document.querySelectorAll('.plan-button').forEach(btn => {
+        btn.addEventListener('click', (e) => {
             e.preventDefault();
-            const name = (document.getElementById('subscribe-name')?.value || '').trim();
-            const email = (document.getElementById('subscribe-email')?.value || '').trim();
-            if (!name || !email) {
-                showSubscribeMessage('⚠️ Por favor, preencha nome e e-mail.', false);
-                return;
-            }
-            if (!isValidEmail(email)) {
-                showSubscribeMessage('⚠️ E-mail inválido. Verifique e tente novamente.', false);
-                return;
-            }
-
-            try {
-                const res = await fetch('subscribe.php', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams({ name, email }).toString()
-                });
-                const data = await res.json().catch(() => ({ success: false }));
-                if (res.ok && data.success) {
-                    // salvar localmente para campanhas futuras
-                    try {
-                        const key = 'movaccess_subscribers';
-                        const list = JSON.parse(localStorage.getItem(key) || '[]');
-                        list.push({ name, email, ts: Date.now() });
-                        localStorage.setItem(key, JSON.stringify(list));
-                    } catch (_) {}
-                    subscribeForm.reset();
-                    showSubscribeMessage('✅ Obrigado por se inscrever! Em breve você receberá nossas atualizações.', true);
-                } else {
-                    showSubscribeMessage('⚠️ Não foi possível enviar sua inscrição. Tente novamente mais tarde.', false);
-                }
-            } catch (_) {
-                showSubscribeMessage('⚠️ Não foi possível enviar sua inscrição. Tente novamente mais tarde.', false);
-            }
+            const card = btn.closest('.plan-card');
+            const key = card && card.dataset && card.dataset.plan ? card.dataset.plan : null;
+            if (key) openPlanModal(key);
         });
-    }
+    });
 
-    function showSubscribeMessage(message, isSuccess) {
-        if (!subscribeMsg) return;
-        subscribeMsg.textContent = message;
-        subscribeMsg.style.background = isSuccess ? '#E6F9E8' : '#FFF4E5';
-        subscribeMsg.style.color = isSuccess ? '#1b5e20' : '#8a5a00';
-        subscribeMsg.style.border = isSuccess ? '1px solid #b6e7c0' : '1px solid #ffe0b2';
-        subscribeMsg.style.display = 'block';
-        subscribeMsg.style.opacity = '0';
-        subscribeMsg.style.transition = 'opacity 0.4s ease';
-        requestAnimationFrame(() => {
-            subscribeMsg.style.opacity = '1';
+    // close handlers
+    planModal.addEventListener('click', (e) => {
+        if (e.target.matches('[data-close]') || e.target === planModal.querySelector('.plan-modal-backdrop')) {
+            closePlanModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && planModal.getAttribute('aria-hidden') === 'false') {
+            closePlanModal();
+        }
+    });
+
+    // Plans carousel for mobile: arrows, dots, swipe
+    (function initPlansCarousel(){
+        const carousel = document.getElementById('plansCarousel');
+        if (!carousel) return;
+        const track = carousel.querySelector('.plans-track');
+        const prevBtn = carousel.querySelector('.plans-prev');
+        const nextBtn = carousel.querySelector('.plans-next');
+        const dotsContainer = carousel.querySelector('.plans-dots');
+        const cards = Array.from(track.querySelectorAll('.plan-card'));
+        if (!track || !cards.length) return;
+
+        // create dots
+        cards.forEach((_, i) => {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.dataset.index = String(i);
+            if (i === 0) b.classList.add('active');
+            dotsContainer.appendChild(b);
         });
-        // fade-out suave após alguns segundos
-        setTimeout(() => {
-            subscribeMsg.style.opacity = '0';
-            setTimeout(() => { subscribeMsg.style.display = 'none'; }, 400);
-        }, 5000);
-    }
+
+        const dots = Array.from(dotsContainer.querySelectorAll('button'));
+
+        function updateNav() {
+            const scrollLeft = track.scrollLeft;
+            const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(track).gap || 0);
+            const idx = Math.round(scrollLeft / cardWidth);
+            dots.forEach(d => d.classList.remove('active'));
+            if (dots[idx]) dots[idx].classList.add('active');
+            prevBtn.disabled = idx <= 0;
+            nextBtn.disabled = idx >= cards.length - 1;
+        }
+
+        function scrollToIndex(i) {
+            const card = cards[i];
+            if (!card) return;
+            const left = card.offsetLeft - (track.clientWidth - card.clientWidth)/2;
+            track.scrollTo({ left, behavior: 'smooth' });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            const activeIdx = dots.findIndex(d => d.classList.contains('active'));
+            const nextIdx = Math.max(0, activeIdx - 1);
+            scrollToIndex(nextIdx);
+        });
+        nextBtn.addEventListener('click', () => {
+            const activeIdx = dots.findIndex(d => d.classList.contains('active'));
+            const nextIdx = Math.min(cards.length - 1, activeIdx + 1);
+            scrollToIndex(nextIdx);
+        });
+
+        // dot clicks
+        dots.forEach(d => d.addEventListener('click', () => scrollToIndex(Number(d.dataset.index))));
+
+        // update on scroll
+        let scrollTimeout = null;
+        track.addEventListener('scroll', () => {
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(updateNav, 80);
+        }, { passive: true });
+
+        // basic swipe support
+        let startX = 0; let deltaX = 0; let isDown = false;
+        track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; isDown = true; }, { passive: true });
+        track.addEventListener('touchmove', (e) => { if (!isDown) return; deltaX = e.touches[0].clientX - startX; }, { passive: true });
+        track.addEventListener('touchend', () => {
+            isDown = false;
+            if (Math.abs(deltaX) < 40) { deltaX = 0; return; }
+            const activeIdx = dots.findIndex(d => d.classList.contains('active'));
+            if (deltaX < 0) { // swiped left -> next
+                scrollToIndex(Math.min(cards.length - 1, activeIdx + 1));
+            } else { // swiped right -> prev
+                scrollToIndex(Math.max(0, activeIdx - 1));
+            }
+            deltaX = 0;
+        }, { passive: true });
+
+        // initial nav state
+        updateNav();
+        window.addEventListener('resize', updateNav);
+    })();
         // Destaques recentes (cards superiores)
         const highlightButtons = Array.from(blogSection.querySelectorAll('.comms-highlights .service-btn'));
         const highlightTargets = ['noticia2.html', 'noticia3.html', 'noticia4.html'];

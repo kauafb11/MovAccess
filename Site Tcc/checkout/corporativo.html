@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Plano Corporativo | MovAccess</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="checkout-styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/logo.png">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="checkout-navbar">
+        <div class="checkout-navbar-container">
+            <div class="checkout-logo">
+                <a href="../index.html" aria-label="Ir para o início">
+                    <img src="../img/logo.png" alt="MovAccess" />
+                </a>
+            </div>
+            <div style="color: white; font-weight: 500; font-size: 0.95rem;">
+                <i class="fas fa-lock"></i> Checkout Seguro
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="checkout-container">
+        <!-- Voltar Button -->
+        <button class="btn-voltar-checkout" onclick="voltarPaginaAnterior()">
+            <i class="fas fa-arrow-left"></i>
+            Voltar à página anterior
+        </button>
+
+        <div class="checkout-grid">
+            <!-- Summary -->
+            <div class="checkout-summary">
+                <div class="summary-header">
+                    <div class="summary-plan-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h2 class="summary-plan-name">Plano Corporativo</h2>
+                    <p class="summary-plan-desc">Soluções completas para organizações com suporte dedicado e estratégia
+                        personalizada.</p>
+                </div>
+
+                <div class="summary-price">
+                    <div class="price-label">Faturamento a partir de </div>
+                    <div class="price-amount">R$ 2.000,00</div>
+                    <div class="price-period">Planos e prazos personalizados</div>
+                </div>
+
+                <ul class="summary-features">
+                    <li><i class="fas fa-check-circle"></i> Campanhas de patrocínio personalizadas</li>
+                    <li><i class="fas fa-check-circle"></i> Dashboards comparativos em tempo real</li>
+                    <li><i class="fas fa-check-circle"></i> Relatórios executivos e consultoria</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte dedicado e estratégia sob medida</li>
+                </ul>
+
+                <div class="summary-total">
+                    <span>Total:</span>
+                    <span>Definido em contrato</span>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="checkout-form-wrapper">
+                <div class="form-header">
+                    <h2>Dados da Empresa e Pagamento</h2>
+                    <p>Preencha os dados abaixo para solicitar a ativação do plano</p>
+                </div>
+
+                <form id="checkout-form">
+                    <!-- Dados da Empresa -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-user"></i>
+                            Dados do Responsável
+                        </h3>
+
+                        <div class="form-group">
+                            <label for="nome" class="required">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                            <div class="form-group-error" style="display: none;"></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="required">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                                <div class="form-group-error" style="display: none;"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone" class="required">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                                <div class="form-group-error" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpf" class="required">CPF/CNPJ</label>
+                            <input type="text" id="cpf" name="cpf" placeholder="00.000.000/0000-00 ou 000.000.000-00"
+                                required>
+                            <div class="form-group-error" style="display: none;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Endereço -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Endereço de Cobrança
+                        </h3>
+
+                        <div class="form-row">
+                            <div class="form-group" style="grid-column: 1 / -1;">
+                                <label for="cep" class="required">CEP</label>
+                                <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+                                <div class="form-group-error" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="endereco" class="required">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" placeholder="Rua, Avenida, etc." required>
+                            <div class="form-group-error" style="display: none;"></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="numero" class="required">Número</label>
+                                <input type="text" id="numero" name="numero" placeholder="123" required>
+                                <div class="form-group-error" style="display: none;"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="complemento">Complemento</label>
+                                <input type="text" id="complemento" name="complemento" placeholder="Apto, Bloco, etc.">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cidade" class="required">Cidade</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
+                                <div class="form-group-error" style="display: none;"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="estado" class="required">Estado</label>
+                                <select id="estado" name="estado" required>
+                                    <option value="">Selecione</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                                <div class="form-group-error" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pais" class="required">País</label>
+                            <select id="pais" name="pais" required>
+                                <option value="">Selecione</option>
+                                <option value="BR" selected>Brasil</option>
+                                <option value="AR">Argentina</option>
+                                <option value="US">Estados Unidos</option>
+                                <option value="PT">Portugal</option>
+                                <option value="ES">Espanha</option>
+                            </select>
+                            <div class="form-group-error" style="display: none;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Método de Pagamento -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-credit-card"></i>
+                            Método de Pagamento
+                        </h3>
+
+                        <div class="payment-methods">
+                            <button type="button" class="payment-method-btn" data-method="pix">
+                                <i class="fab fa-pix"></i>
+                                <span>PIX</span>
+                            </button>
+                            <button type="button" class="payment-method-btn" data-method="card">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Cartão</span>
+                            </button>
+                            <button type="button" class="payment-method-btn" data-method="boleto">
+                                <i class="fas fa-barcode"></i>
+                                <span>Boleto</span>
+                            </button>
+                        </div>
+
+                        <!-- PIX Payment -->
+                        <div id="pix-payment" class="payment-details">
+                            <div class="pix-payment">
+                                <i class="fab fa-pix" style="font-size: 3rem; color: #00A86B; margin-bottom: 1rem;"></i>
+                                <h4 style="color: #333; margin-bottom: 1rem;">Pagamento via PIX</h4>
+                                <p style="color: #666; margin-bottom: 1.5rem;">Escaneie o QR Code ou copie o código para
+                                    pagar</p>
+                                <div class="pix-qr-code">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <div class="pix-code" id="pix-code">Gerando código PIX...</div>
+                                <button type="button" class="pix-copy-btn" onclick="copiarPixCode()">
+                                    <i class="fas fa-copy"></i> Copiar Código
+                                </button>
+                                <p style="color: #666; font-size: 0.85rem; margin-top: 1rem;">Aprovação imediata após
+                                    pagamento</p>
+                            </div>
+                        </div>
+
+                        <!-- Card Payment -->
+                        <div id="card-payment" class="payment-details">
+                            <div class="card-fields">
+                                <div class="form-group">
+                                    <label for="card-number" class="required">Número do Cartão</label>
+                                    <div class="card-number-group">
+                                        <input type="text" id="card-number" name="card-number"
+                                            placeholder="0000 0000 0000 0000" maxlength="19" required>
+                                        <div class="card-icons">
+                                            <i class="fab fa-cc-visa" style="color: #0066CC;"></i>
+                                            <i class="fab fa-cc-mastercard" style="color: #e74c3c;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group-error" style="display: none;"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="card-name" class="required">Nome no Cartão</label>
+                                    <input type="text" id="card-name" name="card-name"
+                                        placeholder="Nome como está no cartão" required>
+                                    <div class="form-group-error" style="display: none;"></div>
+                                </div>
+
+                                <div class="card-row">
+                                    <div class="form-group">
+                                        <label for="card-expiry" class="required">Validade</label>
+                                        <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA"
+                                            maxlength="5" required>
+                                        <div class="form-group-error" style="display: none;"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="card-cvv" class="required">CVV</label>
+                                        <input type="text" id="card-cvv" name="card-cvv" placeholder="000" maxlength="4"
+                                            required>
+                                        <div class="form-group-error" style="display: none;"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-installments-corporativo">Parcelamento</label>
+                                    <select id="card-installments-corporativo" name="card-installments-corporativo">
+                                        <option value="1">1x de R$ 2.000,00 sem juros</option>
+                                        <option value="2">2x de R$ 1.000,00 sem juros</option>
+                                        <option value="3">3x de R$ 666,67 sem juros</option>
+                                        <option value="4">4x de R$ 500,00 sem juros</option>
+                                        <option value="5">5x de R$ 400,00 sem juros</option>
+                                        <option value="6">6x de R$ 333,33 sem juros</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="card-installments">Condições de Pagamento</label>
+                                    <select id="card-installments" name="card-installments">
+                                        <option value="1">Faturamento mensal</option>
+                                        <option value="2">Faturamento trimestral</option>
+                                        <option value="3">Faturamento anual</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Boleto Payment -->
+                        <div id="boleto-payment" class="payment-details">
+                            <div class="boleto-payment">
+                                <i class="fas fa-barcode"
+                                    style="font-size: 3rem; color: #0066CC; margin-bottom: 1rem;"></i>
+                                <h4 style="color: #333; margin-bottom: 1rem;">Boleto Bancário</h4>
+                                <p style="color: #666; margin-bottom: 1.5rem;">Seu boleto será gerado após o
+                                    preenchimento dos dados</p>
+                                <div class="boleto-code" id="boleto-code">Gerando código de barras...</div>
+                                <button type="button" class="pix-copy-btn" onclick="baixarBoleto()"
+                                    style="background: #0066CC;">
+                                    <i class="fas fa-download"></i> Baixar Boleto
+                                </button>
+                                <p class="boleto-info">
+                                    <i class="fas fa-info-circle"></i>
+                                    Compensação em até 2 dias úteis após pagamento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="success-message">
+                        <div class="success-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3>Solicitação enviada com sucesso!</h3>
+                        <p>Entraremos em contato para ativar seu plano e formalizar as condições.</p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-submit" id="btn-submit">
+                        <i class="fas fa-lock"></i> Finalizar Solicitação
+                    </button>
+
+                    <div class="security-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Seus dados estão protegidos com criptografia SSL</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.VOLTAR_URL = '../planos/corporativo.html';
+        window.PLANO_NOME = 'Corporativo';
+    </script>
+    <script src="checkout-script.js"></script>
+</body>
+
+</html>

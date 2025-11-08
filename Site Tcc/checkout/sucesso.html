@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Concluído | MovAccess</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/logo.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #f4f8ff 50%, #ffffff 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav {
+            position: sticky; top: 0; width: 100%; background: #0066CC; padding: 1rem 0; box-shadow: 0 2px 16px rgba(0,102,204,0.25);
+        }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo img { height: 44px; filter: brightness(0) invert(1); }
+        .container { max-width: 760px; margin: 48px auto; padding: 0 20px; }
+        .card { background: #fff; border-radius: 24px; padding: 2.5rem; box-shadow: 0 12px 40px rgba(0,0,0,0.08); text-align: center; }
+        .icon {
+            width: 96px; height: 96px; border-radius: 50%; margin: 0 auto 1.25rem;
+            background: #00A86B; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,168,107,0.35); animation: scaleIn 0.5s ease;
+        }
+        h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        p { color: #666; margin-bottom: 0.75rem; }
+        .plan { font-weight: 700; color: #0066CC; }
+        .summary { margin-top: 1.25rem; text-align: left; background: #f8fafc; border: 1px solid #eef3f8; border-radius: 16px; padding: 1.25rem; }
+        .summary-title { font-size: 1rem; font-weight: 600; color: #333; margin-bottom: .75rem; }
+        .summary-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: .75rem 1rem; }
+        .summary-item { display: flex; align-items: center; gap: .5rem; color: #444; }
+        .summary-item i { color: #0066CC; }
+        .summary-label { font-weight: 600; color: #333; }
+        .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+        .btn { padding: 0.95rem 1.2rem; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; transition: all 0.25s ease; }
+        .btn-primary { background: linear-gradient(135deg, #0066CC 0%, #0088DD 50%, #00A86B 100%); color: #fff; box-shadow: 0 8px 28px rgba(0,102,204,0.35); }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-outline { background: #fff; border: 2px solid rgba(0,102,204,0.25); color: #0066CC; }
+        .btn-outline:hover { background: rgba(0,102,204,0.06); }
+        .badge { display: flex; align-items: center; justify-content: center; gap: .5rem; color: #666; font-size: .9rem; margin-top: 1.25rem; }
+        .badge i { color: #00A86B; }
+        @keyframes scaleIn { from { transform: scale(0); } to { transform: scale(1); } }
+        @media (max-width: 640px) { .actions { grid-template-columns: 1fr; } .card { padding: 2rem; } .summary-list { grid-template-columns: 1fr; } }
+    </style>
+    <script>
+        function getQueryParam(key){const params=new URLSearchParams(window.location.search);return params.get(key)||''}
+        function voltarInicio(){window.location.href = '../index.html'}
+        function acessarConta(){window.location.href = '../index.html#contato'}
+        document.addEventListener('DOMContentLoaded',()=>{
+            const plano = decodeURIComponent(getQueryParam('plano')||'').replace(/\+/g,' ').trim() || 'Plano';
+            const valor = decodeURIComponent(getQueryParam('valor')||'').trim() || '—';
+            const metodo = (decodeURIComponent(getQueryParam('metodo')||'').trim() || '—').toUpperCase();
+            const ts = parseInt(getQueryParam('ts')||'',10);
+            const date = isNaN(ts) ? new Date() : new Date(ts);
+            const dataTexto = date.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+
+            const planSpan = document.getElementById('plan-name');
+            if (planSpan) planSpan.textContent = plano;
+
+            const resPlano = document.getElementById('res-plano');
+            const resValor = document.getElementById('res-valor');
+            const resData = document.getElementById('res-data');
+            const resMetodo = document.getElementById('res-metodo');
+            if (resPlano) resPlano.textContent = plano;
+            if (resValor) resValor.textContent = valor || '—';
+            if (resData) resData.textContent = dataTexto;
+            if (resMetodo) resMetodo.textContent = metodo || '—';
+        });
+    </script>
+    </head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo"><a href="../index.html"><img src="../img/logo.png" alt="MovAccess" /></a></div>
+            <div style="color:#fff;font-weight:500"><i class="fas fa-lock"></i> Pagamento 100% seguro</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <div class="icon"><i class="fas fa-check"></i></div>
+            <h1>✅ Pagamento concluído com sucesso!</h1>
+            <p>Seu plano <span class="plan" id="plan-name">Plano</span> foi ativado com sucesso. Obrigado por confiar em nós!</p>
+            <p>Um e-mail com os detalhes da compra e instruções foi enviado para você.</p>
+
+            <div class="summary" aria-live="polite">
+                <div class="summary-title">Resumo do pedido</div>
+                <ul class="summary-list">
+                    <li class="summary-item"><i class="fas fa-tag" aria-hidden="true"></i> <span class="summary-label">Plano:</span> <span id="res-plano">—</span></li>
+                    <li class="summary-item"><i class="fas fa-receipt" aria-hidden="true"></i> <span class="summary-label">Valor total:</span> <span id="res-valor">—</span></li>
+                    <li class="summary-item"><i class="fas fa-calendar" aria-hidden="true"></i> <span class="summary-label">Data e horário:</span> <span id="res-data">—</span></li>
+                    <li class="summary-item"><i class="fas fa-credit-card" aria-hidden="true"></i> <span class="summary-label">Pagamento:</span> <span id="res-metodo">—</span></li>
+                </ul>
+            </div>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="acessarConta()"><i class="fas fa-user"></i> Acessar conta</button>
+                <button class="btn btn-outline" onclick="voltarInicio()"><i class="fas fa-home"></i> Voltar para a página inicial</button>
+            </div>
+            <div class="badge"><i class="fas fa-shield-alt"></i> Seus dados estão protegidos com criptografia de ponta a ponta</div>
+        </div>
+    </main>
+</body>
+</html>
+
+

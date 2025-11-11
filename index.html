@@ -426,26 +426,7 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    <!-- Plan modal container -->
-    <div id="plan-modal" class="plan-modal" aria-hidden="true">
-        <div class="plan-modal-backdrop" data-close="true"></div>
-        <div class="plan-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="plan-modal-title">
-            <button class="plan-modal-close" aria-label="Fechar modal" data-close>&times;</button>
-            <div class="plan-modal-body">
-                <h3 id="plan-modal-title"></h3>
-                <p id="plan-modal-desc"></p>
-                <div id="plan-modal-price" class="plan-modal-price"></div>
-                <ul id="plan-modal-features" class="plan-modal-features"></ul>
-                <div class="plan-modal-actions">
-                    <a id="plan-modal-cta" class="cta-button-enhanced" href="#contato">Contratar agora</a>
-                    <button class="plan-modal-secondary" data-close>Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script>
-        <!-- Plan buttons now open an accessible modal handled by script.js -->
-
         // Função para scroll suave até a seção de serviços quando há hash #servicos na URL
         function scrollToServicos() {
             const hash = window.location.hash;

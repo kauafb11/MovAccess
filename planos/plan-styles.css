@@ -1,11 +1,12 @@
 /* ========================================
    PLAN PAGES - PREMIUM DESIGN
+   MOBILE-FIRST RESPONSIVE APPROACH
    ======================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
-/* Reset e Base */
+/* Reset e Base - Mobile First */
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +15,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -39,14 +41,21 @@ body::before {
     z-index: 0;
 }
 
-/* Navbar */
+/* Images - Fluid by default */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navbar - Mobile First */
 .plan-navbar {
     position: fixed;
     top: 0;
     width: 100%;
     background: #0066CC;
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     box-shadow: 0 2px 20px rgba(0, 102, 204, 0.3);
     transition: all 0.3s ease;
 }
@@ -54,7 +63,7 @@ body::before {
 .plan-navbar-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +71,7 @@ body::before {
 }
 
 .plan-logo img {
-    height: 50px;
+    height: 40px;
     filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
 }
@@ -71,34 +80,126 @@ body::before {
     transform: scale(1.05);
 }
 
-/* Main Container */
+/* Hamburger Menu Button - Mobile */
+.plan-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    position: relative;
+}
+
+.plan-menu-toggle span {
+    width: 24px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.plan-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.plan-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.plan-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Back Button - Hidden by default on mobile, shown in menu */
+.btn-voltar-navbar {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+}
+
+.btn-voltar-navbar.active {
+    display: flex;
+    position: fixed;
+    top: 70px;
+    right: 1rem;
+    z-index: 1001;
+    animation: slideDown 0.3s ease;
+}
+
+.btn-voltar-navbar:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-voltar-navbar i {
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-voltar-navbar:hover i {
+    transform: translateX(-3px);
+}
+
+.btn-text {
+    display: none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main Container - Mobile First */
 .plan-main-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 120px 20px 80px;
+    padding: 90px 1rem 3rem;
     position: relative;
     z-index: 1;
 }
 
-/* Hero Section */
+/* Hero Section - Mobile First */
 .plan-hero {
     text-align: center;
-    padding: 4rem 0 6rem;
+    padding: 2rem 0 3rem;
     position: relative;
     animation: fadeUpIn 1s ease;
 }
 
 .plan-icon-large {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     box-shadow: 0 10px 40px rgba(0, 102, 204, 0.3);
     animation: float 3s ease-in-out infinite;
     position: relative;
@@ -118,7 +219,7 @@ body::before {
 }
 
 .plan-title {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 800;
     background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
     -webkit-background-clip: text;
@@ -130,6 +231,8 @@ body::before {
     position: relative;
     display: inline-block;
     transition: all 0.5s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .plan-title::after {
@@ -138,40 +241,40 @@ body::before {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
+    width: 60px;
+    height: 3px;
     background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
     border-radius: 2px;
 }
 
-.plan-hero:hover .plan-title {
-    filter: brightness(1.1);
-    transform: scale(1.02);
-}
-
 .plan-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: #555555;
-    margin: 2rem 0 1.5rem;
+    margin: 1.5rem 0 1rem;
     animation: fadeIn 1.2s ease 0.3s both;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .plan-description {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: #666666;
-    max-width: 700px;
-    margin: 0 auto 3rem;
-    line-height: 1.8;
+    max-width: 100%;
+    margin: 0 auto 2rem;
+    padding: 0 0.5rem;
+    line-height: 1.7;
     animation: fadeIn 1.2s ease 0.6s both;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* Intro Section */
+/* Intro Section - Mobile First */
 .plan-intro {
     background: white;
-    border-radius: 24px;
-    padding: 3rem;
-    margin-bottom: 4rem;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     position: relative;
     overflow: hidden;
@@ -184,30 +287,34 @@ body::before {
     top: 0;
     left: 0;
     right: 0;
-    height: 6px;
+    height: 4px;
     background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
 }
 
 .plan-intro-text {
-    font-size: 1.15rem;
+    font-size: 0.95rem;
     color: #555555;
-    line-height: 1.9;
+    line-height: 1.7;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* Benefits Section */
+/* Benefits Section - Mobile First */
 .plan-benefits {
-    margin: 4rem 0;
+    margin: 2rem 0;
 }
 
 .plan-section-title {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: #333333;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     position: relative;
     padding-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .plan-section-title::after {
@@ -216,7 +323,7 @@ body::before {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 50px;
     height: 3px;
     background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
     border-radius: 2px;
@@ -224,15 +331,15 @@ body::before {
 
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .benefit-card {
     background: white;
-    padding: 2rem;
-    border-radius: 20px;
+    padding: 1.5rem;
+    border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
@@ -256,16 +363,16 @@ body::before {
 }
 
 .benefit-icon {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     transition: all 0.4s ease;
 }
 
@@ -275,24 +382,28 @@ body::before {
 }
 
 .benefit-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #333333;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .benefit-description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #666666;
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* Features List */
+/* Features List - Mobile First */
 .plan-features-section {
     background: linear-gradient(135deg, rgba(0, 102, 204, 0.02) 0%, rgba(0, 168, 107, 0.02) 100%);
-    border-radius: 24px;
-    padding: 4rem 3rem;
-    margin: 4rem 0;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
     position: relative;
     overflow: hidden;
 }
@@ -303,22 +414,22 @@ body::before {
     top: 0;
     left: 0;
     right: 0;
-    height: 6px;
+    height: 4px;
     background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .feature-item {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    padding: 1.2rem;
+    gap: 0.75rem;
+    padding: 1rem;
     background: white;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -344,7 +455,7 @@ body::before {
 
 .feature-icon {
     color: #00A86B;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     flex-shrink: 0;
     margin-top: 0.2rem;
     transition: all 0.3s ease;
@@ -357,26 +468,28 @@ body::before {
 
 .feature-text {
     color: #555555;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* Why Choose Section */
+/* Why Choose Section - Mobile First */
 .plan-why {
-    margin: 4rem 0;
+    margin: 2rem 0;
 }
 
 .reasons-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .reason-card {
     background: white;
-    padding: 2.5rem 2rem;
-    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
     text-align: center;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
@@ -398,47 +511,51 @@ body::before {
 }
 
 .reason-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .reason-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #333333;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .reason-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #666666;
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* Testimonials Section */
+/* Testimonials Section - Mobile First */
 .plan-testimonials {
-    margin: 4rem 0;
+    margin: 2rem 0;
     background: white;
-    border-radius: 24px;
-    padding: 4rem 3rem;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .testimonial-card {
     background: linear-gradient(135deg, rgba(0, 102, 204, 0.02) 0%, rgba(0, 168, 107, 0.02) 100%);
-    padding: 2rem;
-    border-radius: 16px;
+    padding: 1.5rem;
+    border-radius: 12px;
     border-left: 4px solid #00A86B;
     transition: all 0.3s ease;
     opacity: 0;
@@ -458,13 +575,13 @@ body::before {
 .testimonial-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .testimonial-avatar {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
     display: flex;
@@ -472,41 +589,48 @@ body::before {
     justify-content: center;
     color: white;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    flex-shrink: 0;
 }
 
 .testimonial-info h4 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #333333;
     margin-bottom: 0.2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .testimonial-info p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #666666;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .testimonial-stars {
     color: #FFD700;
     margin: 0.5rem 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .testimonial-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #555555;
     line-height: 1.7;
     font-style: italic;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* CTA Section */
+/* CTA Section - Mobile First */
 .plan-cta-section {
     text-align: center;
-    padding: 5rem 2rem;
-    margin: 4rem 0;
+    padding: 3rem 1.5rem;
+    margin: 2rem 0;
     background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 168, 107, 0.05) 100%);
-    border-radius: 24px;
+    border-radius: 16px;
     position: relative;
     overflow: hidden;
 }
@@ -529,35 +653,40 @@ body::before {
 }
 
 .cta-title {
-    font-size: 2.8rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: #333333;
     margin-bottom: 1rem;
     line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .cta-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #666666;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
+    margin-bottom: 2rem;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 0.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* Premium CTA Button */
+/* Premium CTA Button - Mobile First */
 .plan-cta-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 0.6rem;
     background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
     color: white;
     border: none;
-    padding: 1.2rem 3rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -566,7 +695,9 @@ body::before {
     overflow: hidden;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    min-width: 280px;
+    width: 100%;
+    max-width: 300px;
+    min-height: 48px;
 }
 
 .plan-cta-button::before {
@@ -595,62 +726,12 @@ body::before {
 }
 
 .cta-note {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #888888;
     margin-top: 1rem;
     font-style: italic;
-}
-
-/* Botão Voltar na Navbar */
-.btn-voltar-navbar {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.15);
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    white-space: nowrap;
-}
-
-.btn-voltar-navbar:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.btn-voltar-navbar i {
-    font-size: 0.85rem;
-    transition: transform 0.3s ease;
-}
-
-.btn-voltar-navbar:hover i {
-    transform: translateX(-3px);
-}
-
-/* Back Link (mantido para compatibilidade, se necessário) */
-.back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #0066CC;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    margin-top: 3rem;
-}
-
-.back-link:hover {
-    color: #00A86B;
-    transform: translateX(-5px);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Animations */
@@ -733,114 +814,505 @@ body::before {
     transform: translateY(0);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   Mobile-First Approach
+   ======================================== */
+
+/* Breakpoint: 480px (Small Mobile to Large Mobile) */
+@media (min-width: 480px) {
     .plan-navbar-container {
-        padding: 0 15px;
-    }
-
-    .btn-voltar-navbar {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.75rem;
-        gap: 0.35rem;
-    }
-
-    .btn-voltar-navbar i {
-        font-size: 0.85rem;
+        padding: 0 1.25rem;
     }
 
     .plan-logo img {
-        height: 40px;
+        height: 45px;
     }
 
     .plan-main-container {
-        padding: 100px 15px 60px;
+        padding: 95px 1.25rem 3.5rem;
     }
 
     .plan-hero {
-        padding: 2rem 0 4rem;
+        padding: 2.5rem 0 3.5rem;
     }
 
     .plan-icon-large {
-        width: 80px;
-        height: 80px;
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
+        width: 75px;
+        height: 75px;
+        font-size: 2.2rem;
     }
 
     .plan-title {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
     .plan-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .plan-description {
         font-size: 1rem;
+        padding: 0;
     }
 
     .plan-intro {
-        padding: 2rem 1.5rem;
+        padding: 2rem;
+    }
+
+    .plan-intro-text {
+        font-size: 1rem;
     }
 
     .plan-section-title {
         font-size: 2rem;
     }
 
-    .benefits-grid,
-    .features-grid,
-    .reasons-grid,
+    .benefits-grid {
+        gap: 1.75rem;
+    }
+
+    .benefit-card {
+        padding: 1.75rem;
+    }
+
+    .benefit-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 1.6rem;
+    }
+
+    .benefit-title {
+        font-size: 1.15rem;
+    }
+
+    .plan-features-section {
+        padding: 2.5rem 2rem;
+    }
+
+    .features-grid {
+        gap: 1.25rem;
+    }
+
+    .feature-item {
+        padding: 1.25rem;
+    }
+
+    .reasons-grid {
+        gap: 1.75rem;
+    }
+
+    .reason-card {
+        padding: 2.25rem 1.75rem;
+    }
+
+    .reason-icon {
+        font-size: 2.2rem;
+    }
+
+    .reason-title {
+        font-size: 1.15rem;
+    }
+
+    .plan-testimonials {
+        padding: 2.5rem 2rem;
+    }
+
     .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.75rem;
+    }
+
+    .testimonial-card {
+        padding: 1.75rem;
+    }
+
+    .testimonial-avatar {
+        width: 55px;
+        height: 55px;
+        font-size: 1.1rem;
     }
 
     .plan-cta-section {
-        padding: 3rem 1.5rem;
+        padding: 3.5rem 2rem;
     }
 
     .cta-title {
         font-size: 2rem;
     }
 
+    .cta-subtitle {
+        font-size: 1.1rem;
+    }
+
     .plan-cta-button {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        min-width: auto;
-        width: 100%;
-        max-width: 300px;
+        padding: 1.1rem 2.5rem;
+        font-size: 1.05rem;
+        max-width: 320px;
+    }
+
+    .btn-voltar-navbar.active {
+        top: 75px;
     }
 }
 
-@media (max-width: 480px) {
+/* Breakpoint: 768px (Tablet) */
+@media (min-width: 768px) {
+    .plan-navbar {
+        padding: 1rem 0;
+    }
+
     .plan-navbar-container {
-        padding: 0 10px;
+        padding: 0 1.5rem;
+    }
+
+    .plan-menu-toggle {
+        display: none;
     }
 
     .btn-voltar-navbar {
-        font-size: 0.75rem;
-        padding: 0.35rem 0.65rem;
-        border-radius: 6px;
-        gap: 0.3rem;
+        display: inline-flex;
+        position: static;
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
     }
 
-    .btn-voltar-navbar i {
-        font-size: 0.8rem;
+    .btn-voltar-navbar.active {
+        position: static;
+        animation: none;
+    }
+
+    .btn-text {
+        display: inline;
     }
 
     .plan-logo img {
-        height: 35px;
+        height: 50px;
     }
 
-    .plan-title {
-        font-size: 2rem;
+    .plan-main-container {
+        padding: 120px 1.5rem 4rem;
+    }
+
+    .plan-hero {
+        padding: 3rem 0 4rem;
     }
 
     .plan-icon-large {
+        width: 90px;
+        height: 90px;
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .plan-title {
+        font-size: 3rem;
+    }
+
+    .plan-title::after {
+        width: 70px;
+    }
+
+    .plan-subtitle {
+        font-size: 1.3rem;
+        margin: 2rem 0 1.5rem;
+    }
+
+    .plan-description {
+        font-size: 1.05rem;
+        max-width: 700px;
+        margin: 0 auto 3rem;
+        padding: 0;
+    }
+
+    .plan-intro {
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+        border-radius: 20px;
+    }
+
+    .plan-intro-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .plan-section-title {
+        font-size: 2.25rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .plan-section-title::after {
+        width: 55px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .benefit-card {
+        padding: 2rem;
+        border-radius: 18px;
+    }
+
+    .benefit-icon {
         width: 70px;
         height: 70px;
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .benefit-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .benefit-description {
+        font-size: 0.95rem;
+    }
+
+    .plan-features-section {
+        padding: 3rem 2.5rem;
+        margin: 3rem 0;
+        border-radius: 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .feature-item {
+        padding: 1.2rem;
+    }
+
+    .feature-icon {
+        font-size: 1.4rem;
+    }
+
+    .feature-text {
+        font-size: 0.95rem;
+    }
+
+    .plan-why {
+        margin: 3rem 0;
+    }
+
+    .reasons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .reason-card {
+        padding: 2.5rem 2rem;
+        border-radius: 18px;
+    }
+
+    .reason-icon {
+        font-size: 2.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .reason-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .reason-text {
+        font-size: 0.9rem;
+    }
+
+    .plan-testimonials {
+        padding: 3rem 2.5rem;
+        margin: 3rem 0;
+        border-radius: 20px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .testimonial-card {
+        padding: 2rem;
+        border-radius: 14px;
+    }
+
+    .testimonial-header {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    .testimonial-info h4 {
+        font-size: 1rem;
+    }
+
+    .testimonial-info p {
+        font-size: 0.85rem;
+    }
+
+    .testimonial-stars {
+        font-size: 1rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+
+    .plan-cta-section {
+        padding: 4rem 2.5rem;
+        margin: 3rem 0;
+        border-radius: 20px;
+    }
+
+    .cta-title {
+        font-size: 2.5rem;
+    }
+
+    .cta-subtitle {
+        font-size: 1.15rem;
+        max-width: 600px;
+        margin-bottom: 2.5rem;
+        padding: 0;
+    }
+
+    .plan-cta-button {
+        padding: 1.2rem 3rem;
+        font-size: 1.1rem;
+        min-width: 280px;
+        max-width: none;
+        width: auto;
     }
 }
 
+/* Breakpoint: 1024px (Desktop) */
+@media (min-width: 1024px) {
+    .plan-navbar-container {
+        padding: 0 2rem;
+    }
+
+    .plan-main-container {
+        padding: 120px 2rem 5rem;
+    }
+
+    .plan-hero {
+        padding: 4rem 0 5rem;
+    }
+
+    .plan-icon-large {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+
+    .plan-title {
+        font-size: 4rem;
+    }
+
+    .plan-title::after {
+        width: 80px;
+    }
+
+    .plan-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .plan-description {
+        font-size: 1.1rem;
+    }
+
+    .plan-intro {
+        padding: 3rem;
+        margin-bottom: 4rem;
+        border-radius: 24px;
+    }
+
+    .plan-intro-text {
+        font-size: 1.15rem;
+        line-height: 1.9;
+    }
+
+    .plan-section-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .plan-section-title::after {
+        width: 60px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .benefit-card {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .plan-features-section {
+        padding: 4rem 3rem;
+        margin: 4rem 0;
+        border-radius: 24px;
+    }
+
+    .plan-features-section::before {
+        height: 6px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .plan-why {
+        margin: 4rem 0;
+    }
+
+    .reasons-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .plan-testimonials {
+        padding: 4rem 3rem;
+        margin: 4rem 0;
+        border-radius: 24px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .plan-cta-section {
+        padding: 5rem 2rem;
+        margin: 4rem 0;
+        border-radius: 24px;
+    }
+
+    .cta-title {
+        font-size: 2.8rem;
+    }
+
+    .cta-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .plan-cta-button {
+        padding: 1.2rem 3rem;
+    }
+}

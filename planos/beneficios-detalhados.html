@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefícios Fiscais Detalhados | MovAccess</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="plan-styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/logo.png">
+</head>
+<body>
+    <nav class="plan-navbar">
+        <div class="plan-navbar-container">
+            <div class="plan-logo">
+                <a href="../index.html" aria-label="Ir para o início">
+                    <img src="../img/logo.png" alt="MovAccess - Início" />
+                </a>
+            </div>
+            <button class="plan-menu-toggle" id="planMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="../index.html#beneficios-fiscais" class="btn-voltar-navbar" id="voltar-inicio">
+                <i class="fas fa-arrow-left"></i>
+                <span class="btn-text">Voltar para página inicial</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="plan-main-container">
+        <!-- Hero Section -->
+        <section class="plan-hero">
+            <div class="plan-icon-large">
+                <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h1 class="plan-title">Benefícios Fiscais & Incentivos Legais</h1>
+            <h2 class="plan-subtitle">Guia completo para empresas e atletas</h2>
+            <p class="plan-description">
+                Entenda como maximizar seus investimentos no esporte através de incentivos fiscais legais, 
+                economizando até 60% e fortalecendo sua marca com responsabilidade social.
+            </p>
+        </section>
+
+        <!-- Índice -->
+        <section class="plan-intro reveal">
+            <h3 style="text-align: center; font-size: 1.3rem; margin-bottom: 1.5rem;">📋 Índice de Conteúdo</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <a href="#lei-incentivo" class="indice-link">📜 Lei de Incentivo ao Esporte</a>
+                <a href="#empresas" class="indice-link">🏢 Benefícios para Empresas</a>
+                <a href="#atletas" class="indice-link">🏃 Benefícios para Atletas</a>
+                <a href="#como-funciona" class="indice-link">⚙️ Como Funciona</a>
+                <a href="#movaccess" class="indice-link">🚀 Como a MovAccess Ajuda</a>
+                <a href="#faq" class="indice-link">❓ Perguntas Frequentes</a>
+            </div>
+        </section>
+
+        <!-- Lei de Incentivo ao Esporte -->
+        <section id="lei-incentivo" class="plan-benefits reveal">
+            <h2 class="plan-section-title">📜 Lei de Incentivo ao Esporte (Lei 11.438/2006)</h2>
+            
+            <div class="benefit-card" style="text-align: left; max-width: 900px; margin: 0 auto 2rem;">
+                <h3 class="benefit-title">O que é?</h3>
+                <p class="benefit-description">
+                    A Lei de Incentivo ao Esporte permite que empresas e pessoas físicas destinem parte do 
+                    Imposto de Renda devido para projetos esportivos aprovados pelo Ministério do Esporte. 
+                    <strong>Projetos paralímpicos têm prioridade na aprovação.</strong>
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-percentage"></i></div>
+                    <h3 class="benefit-title">Dedução Fiscal</h3>
+                    <p class="benefit-description">
+                        <strong>Pessoas Jurídicas:</strong> Até 1% do IR devido<br>
+                        <strong>Pessoas Físicas:</strong> Até 6% do IR devido
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-check-double"></i></div>
+                    <h3 class="benefit-title">Custo Efetivo</h3>
+                    <p class="benefit-description">
+                        Para empresas no lucro real, o custo efetivo pode chegar a <strong>ZERO</strong> 
+                        devido à dedução integral + despesa operacional.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-medal"></i></div>
+                    <h3 class="benefit-title">Prioridade Paralímpica</h3>
+                    <p class="benefit-description">
+                        Projetos voltados ao esporte paralímpico têm <strong>prioridade de aprovação</strong> 
+                        e maior visibilidade social.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fiscal-example" style="max-width: 800px; margin: 2rem auto;">
+                <h4 style="margin-bottom: 1rem;">💡 Exemplo Prático - Empresa</h4>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr style="background: #f5f5f5;">
+                        <th style="padding: 0.75rem; text-align: left; border: 1px solid #ddd;">Item</th>
+                        <th style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">Valor</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Doação para projeto esportivo</td>
+                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 100.000</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Dedução do IR (100%)</td>
+                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd; color: #00A86B;">- R$ 100.000</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Dedução como despesa operacional (34%)</td>
+                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd; color: #00A86B;">- R$ 34.000</td>
+                    </tr>
+                    <tr style="background: #e8f5e9; font-weight: bold;">
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Custo Efetivo Real</td>
+                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 0 a R$ 40.000*</td>
+                    </tr>
+                </table>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #666;">
+                    *Dependendo da estrutura tributária e limites de dedução
+                </p>
+            </div>
+        </section>
+
+        <!-- Benefícios para Empresas -->
+        <section id="empresas" class="plan-features-section reveal">
+            <h2 class="plan-section-title">🏢 Benefícios Completos para Empresas</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <span class="feature-text"><strong>Lei de Incentivo ao Esporte:</strong> Dedução de até 1% do IR devido</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <span class="feature-text"><strong>Retorno fiscal de 100%:</strong> Em projetos aprovados pelo Ministério do Esporte</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <span class="feature-text"><strong>Vantagens em licitações:</strong> Pontuação extra em processos públicos</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <span class="feature-text"><strong>Certificação ESG:</strong> Melhora scores de responsabilidade social</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <span class="feature-text"><strong>Linhas BNDES:</strong> Acesso a financiamentos com condições especiais</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <span class="feature-text"><strong>Incentivos estaduais:</strong> ICMS reduzido em projetos de acessibilidade</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <span class="feature-text"><strong>Marketing social:</strong> Visibilidade positiva da marca</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <span class="feature-text"><strong>Despesa operacional:</strong> Dedução adicional de 34% sobre o valor investido</span>
+                </div>
+            </div>
+
+            <div class="fiscal-example" style="max-width: 900px; margin: 2rem auto;">
+                <h4 style="margin-bottom: 1rem;">📊 Simulação Completa - Investimento de R$ 100.000</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h5 style="color: #0066CC; margin-bottom: 0.5rem;">Projeto Esportivo</h5>
+                        <p style="font-size: 1.5rem; font-weight: bold; color: #333;">R$ 50.000</p>
+                        <p style="font-size: 0.85rem; color: #666;">Dedução 100% do IR</p>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h5 style="color: #0066CC; margin-bottom: 0.5rem;">Embaixadores Atletas</h5>
+                        <p style="font-size: 1.5rem; font-weight: bold; color: #333;">R$ 30.000</p>
+                        <p style="font-size: 0.85rem; color: #666;">Parcial via PAT</p>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h5 style="color: #0066CC; margin-bottom: 0.5rem;">Acessibilidade</h5>
+                        <p style="font-size: 1.5rem; font-weight: bold; color: #333;">R$ 20.000</p>
+                        <p style="font-size: 0.85rem; color: #666;">50% ICMS (R$ 10k)</p>
+                    </div>
+                </div>
+                <div style="background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; text-align: center;">
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Custo Efetivo Total</p>
+                    <p style="font-size: 2.5rem; font-weight: bold; margin: 0;">R$ 40.000</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Economia de 60% + Benefícios Intangíveis</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios para Atletas -->
+        <section id="atletas" class="plan-benefits reveal">
+            <h2 class="plan-section-title">🏃 Benefícios para Atletas Paralímpicos</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3 class="benefit-title">Isenção Total de IR</h3>
+                    <p class="benefit-description">
+                        <strong>100% de isenção</strong> sobre:<br>
+                        • Prêmios de competições<br>
+                        • Salários de clubes<br>
+                        • Patrocínios e direitos de imagem<br>
+                        • Cachês de palestras
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-car"></i></div>
+                    <h3 class="benefit-title">Veículos Adaptados</h3>
+                    <p class="benefit-description">
+                        <strong>Isenções fiscais:</strong><br>
+                        • IPI: até 25%<br>
+                        • ICMS: 12-18%<br>
+                        • IPVA: 100%<br>
+                        • IOF: isento em financiamentos
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3 class="benefit-title">Despesas Médicas</h3>
+                    <p class="benefit-description">
+                        <strong>Deduções ilimitadas:</strong><br>
+                        • Tratamentos médicos<br>
+                        • Equipamentos esportivos<br>
+                        • Próteses e órteses<br>
+                        • Fisioterapia
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-piggy-bank"></i></div>
+                    <h3 class="benefit-title">FGTS</h3>
+                    <p class="benefit-description">
+                        <strong>Saque permitido</strong> para:<br>
+                        • Aquisição de equipamentos esportivos<br>
+                        • Próteses e órteses<br>
+                        • Adaptações necessárias
+                    </p>
+                </div>
+            </div>
+
+            <div class="fiscal-example" style="max-width: 700px; margin: 2rem auto;">
+                <h4 style="margin-bottom: 1rem;">💰 Economia Anual Típica - Atleta</h4>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr style="background: #f5f5f5;">
+                        <th style="padding: 0.75rem; text-align: left; border: 1px solid #ddd;">Benefício</th>
+                        <th style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">Economia</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Isenção IR sobre renda (R$ 10k/mês)</td>
+                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 22.000/ano</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Veículo adaptado (compra)</td>
+                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 30.000</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">IPVA anual (isento)</td>
+                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 2.500/ano</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Deduções médicas</td>
+                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">Variável</td>
+                    </tr>
+                    <tr style="background: #e8f5e9; font-weight: bold;">
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Total Anual (sem veículo)</td>
+                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 24.500+</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Como Funciona -->
+        <section id="como-funciona" class="plan-why reveal">
+            <h2 class="plan-section-title">⚙️ Como Funciona na Prática</h2>
+            
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon"><i class="fas fa-file-signature"></i></div>
+                    <h3 class="reason-title">1. Projeto</h3>
+                    <p class="reason-text">Elaboração e submissão do projeto esportivo ao Ministério do Esporte para aprovação.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="reason-title">2. Aprovação</h3>
+                    <p class="reason-text">Após aprovado, o projeto recebe um número e pode captar recursos de empresas.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3 class="reason-title">3. Captação</h3>
+                    <p class="reason-text">Empresas destinam parte do IR devido ao projeto, gerando nota fiscal.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="reason-title">4. Execução</h3>
+                    <p class="reason-text">Projeto é executado com prestação de contas ao Ministério do Esporte.</p>
+                </div>
+            </div>
+
+            <div class="fiscal-example" style="max-width: 800px; margin: 2rem auto; text-align: center;">
+                <h4 style="margin-bottom: 1rem;">📋 Documentos Necessários</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                    <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <i class="fas fa-building" style="font-size: 2rem; color: #0066CC; margin-bottom: 0.5rem;"></i>
+                        <p style="font-weight: 600; margin: 0;">Empresas</p>
+                        <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">CNPJ, IR, Estatuto Social</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <i class="fas fa-user-tie" style="font-size: 2rem; color: #0066CC; margin-bottom: 0.5rem;"></i>
+                        <p style="font-weight: 600; margin: 0;">Atletas</p>
+                        <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">CPF, Laudo Médico, Registro</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <i class="fas fa-folder-open" style="font-size: 2rem; color: #0066CC; margin-bottom: 0.5rem;"></i>
+                        <p style="font-weight: 600; margin: 0;">Projeto</p>
+                        <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Planilhas, Cronograma, Objetivos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Como a MovAccess Ajuda -->
+        <section id="movaccess" class="plan-features-section reveal">
+            <h2 class="plan-section-title">🚀 Como a MovAccess Facilita Tudo Isso</h2>
+            
+            <div class="features-grid" style="max-width: 1000px; margin: 0 auto;">
+                <div class="feature-item">
+                    <i class="fas fa-graduation-cap feature-icon"></i>
+                    <span class="feature-text"><strong>Educação:</strong> Webinars, e-books e consultorias sobre direitos fiscais</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users feature-icon"></i>
+                    <span class="feature-text"><strong>Network:</strong> Conexão com contadores e advogados especializados</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-file-contract feature-icon"></i>
+                    <span class="feature-text"><strong>Contratos:</strong> Modelos otimizados fiscalmente para patrocínios</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-hands-helping feature-icon"></i>
+                    <span class="feature-text"><strong>Matchmaking:</strong> Conectamos empresas a projetos aprovados</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clipboard-check feature-icon"></i>
+                    <span class="feature-text"><strong>Documentação:</strong> Suporte na preparação de projetos para Lei de Incentivo</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chart-pie feature-icon"></i>
+                    <span class="feature-text"><strong>Relatórios:</strong> Dashboards com impacto fiscal e social dos investimentos</span>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 168, 107, 0.05) 100%); padding: 2rem; border-radius: 16px; margin: 3rem auto; max-width: 800px; text-align: center;">
+                <h3 style="color: #0066CC; margin-bottom: 1rem;">🎯 Nosso Diferencial</h3>
+                <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+                    Não somos apenas uma plataforma de visibilidade. Somos uma <strong>ponte estratégica</strong> 
+                    que conecta atletas, empresas e benefícios fiscais de forma inteligente, transparente e rentável para todos.
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="plan-testimonials reveal">
+            <h2 class="plan-section-title">❓ Perguntas Frequentes</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>Toda empresa pode usar a Lei de Incentivo ao Esporte?</h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Empresas tributadas no <strong>lucro real</strong> podem deduzir até 1% do IR devido. Empresas no lucro presumido ou Simples Nacional não podem usar este benefício, mas podem usar outros incentivos estaduais e municipais.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>Atletas paralímpicos têm isenção automática de IR?</h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, conforme a <strong>Lei 13.166/2015</strong>, atletas paralímpicos têm isenção total sobre prêmios, patrocínios e rendimentos relacionados à sua atividade esportiva. É necessário comprovar a condição através de laudo médico e registro em federação.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>Quanto tempo leva para aprovar um projeto?</h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O prazo médio de aprovação no Ministério do Esporte é de <strong>60 a 90 dias</strong>. Projetos paralímpicos têm prioridade na fila de análise.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>A MovAccess cobra para ajudar no processo?</h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                        </div>
+                        <div class="faq-answer">
+                        <p>Oferecemos <strong>consultoria básica gratuita</strong> para membros da plataforma. Para elaboração completa de projetos e acompanhamento jurídico, temos parceiros especializados com preços acessíveis.</p>
+                        </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-question-circle"></i>
+                                <h4>Posso combinar diferentes incentivos fiscais?</h4>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>Sim!</strong> É possível combinar Lei de Incentivo ao Esporte (federal) com incentivos estaduais de ICMS e municipais de ISS, maximizando ainda mais a economia fiscal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- CTA Final -->
+                <section class="plan-cta-section reveal">
+                    <h2 class="cta-title">Pronto para maximizar seus benefícios fiscais?</h2>
+                    <p class="cta-subtitle">
+                        Entre em contato com nossa equipe e descubra como podemos ajudar você ou sua empresa a 
+                        aproveitar todos os incentivos disponíveis de forma legal e estratégica.
+                    </p>
+                    <a href="../index.html#contato" class="plan-cta-button">
+                        <i class="fas fa-comments"></i>
+                        Falar com um Especialista
+                    </a>
+                    <p class="cta-note">Consultoria inicial gratuita para análise de elegibilidade</p>
+                </section>
+            
+            </main>
+            
+            <!-- VLibras -->
+            <div vw class="enabled">
+                <div vw-access-button class="active"></div>
+                <div vw-plugin-wrapper>
+                    <div class="vw-plugin-top-wrapper"></div>
+                </div>
+            </div>
+            
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <script>
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            </script>
+            
+            <script>
+                // Menu Toggle
+                const planMenuToggle = document.getElementById('planMenuToggle');
+                const voltarBtn = document.getElementById('voltar-inicio');
+                
+                if (planMenuToggle && voltarBtn) {
+                    planMenuToggle.addEventListener('click', () => {
+                        planMenuToggle.classList.toggle('active');
+                        voltarBtn.classList.toggle('active');
+                        document.body.style.overflow = voltarBtn.classList.contains('active') ? 'hidden' : '';
+                    });
+                }
+            
+                // Scroll Reveal
+                const reveals = document.querySelectorAll('.reveal');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                reveals.forEach(reveal => observer.observe(reveal));
+            
+                // FAQ Toggle
+                document.querySelectorAll('.faq-question').forEach(question => {
+                    question.addEventListener('click', () => {
+                        const item = question.parentElement;
+                        const wasActive = item.classList.contains('active');
+                        
+                        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                        
+                        if (!wasActive) {
+                            item.classList.add('active');
+                        }
+                    });
+                });
+            
+                // Smooth scroll para índice
+                document.querySelectorAll('.indice-link').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = document.querySelector(link.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    });
+                });
+            </script>

@@ -1,0 +1,281 @@
+/* ========================================
+   SEÇÃO BENEFÍCIOS FISCAIS
+   ======================================== */
+
+   .fiscal-benefits-section {
+    padding: 5rem 0 4rem;
+    background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+    position: relative;
+    width: 100%;
+}
+
+.fiscal-benefits-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 102, 204, 0.1), transparent);
+}
+
+/* Destaque Principal */
+.fiscal-highlight {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    margin: 2rem 0 3rem;
+    box-shadow: 0 15px 40px rgba(251, 191, 36, 0.3);
+}
+
+.fiscal-highlight-label {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.fiscal-highlight-number {
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+.fiscal-highlight-text {
+    color: white;
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+/* Grid Empresas vs Atletas */
+.fiscal-dual-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.fiscal-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.fiscal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 102, 204, 0.15);
+}
+
+.fiscal-card-header {
+    background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.fiscal-card-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.8rem;
+}
+
+.fiscal-card-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.fiscal-card-body {
+    padding: 2rem 1.5rem;
+}
+
+.fiscal-benefits-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.fiscal-benefits-list li {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.fiscal-benefits-list li:last-child {
+    border-bottom: none;
+}
+
+.fiscal-benefits-list i {
+    color: #00A86B;
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.fiscal-example {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 168, 107, 0.05) 100%);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 3px solid #0066CC;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Processo / Steps */
+.fiscal-process {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+    margin: 3rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.fiscal-process-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+.fiscal-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.fiscal-step {
+    text-align: center;
+    position: relative;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.02) 0%, rgba(0, 168, 107, 0.02) 100%);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.fiscal-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.1);
+}
+
+.fiscal-step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.fiscal-step-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 1rem 0 0.5rem;
+}
+
+.fiscal-step h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.fiscal-step p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* CTA Final */
+.fiscal-cta {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 168, 107, 0.05) 100%);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    margin-top: 3rem;
+}
+
+.fiscal-cta h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.fiscal-cta p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsivo - Tablet */
+@media (min-width: 768px) {
+    .fiscal-highlight {
+        padding: 3rem 2rem;
+    }
+    
+    .fiscal-highlight-number {
+        font-size: 5rem;
+    }
+    
+    .fiscal-dual-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .fiscal-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .fiscal-process {
+        padding: 3rem 2.5rem;
+    }
+}
+
+/* Responsivo - Desktop */
+@media (min-width: 1024px) {
+    .fiscal-benefits-section {
+        padding: 8rem 0 6rem;
+    }
+    
+    .fiscal-highlight-number {
+        font-size: 6rem;
+    }
+    
+    .fiscal-steps {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .fiscal-cta h3 {
+        font-size: 2.5rem;
+    }
+}

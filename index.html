@@ -1,476 +1,703 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovAccess - Visibilidade para o talento, acessibilidade para o mundo</title>
+    <title>MovAccess </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- Favicons com tamanhos explícitos para melhor renderização -->
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/logo.png">
 </head>
+
 <body>
     <!-- Navbar Fixa -->
-    <nav class="navbar" id="navbar">
+    <<nav class="navbar" id="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <!-- Logo clicável que retorna ao início -->
                 <a href="#inicio" aria-label="Ir para o início">
                     <img src="img/logo.png" alt="MovAccess - Início" loading="eager" />
                 </a>
             </div>
-            
+
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#inicio" class="nav-link">Início</a></li>
                 <li><a href="#comunicacao" class="nav-link">Comunicação</a></li>
                 <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#beneficios-fiscais" class="nav-link">Benefícios</a></li>
                 <li><a href="#blog" class="nav-link">Notícias</a></li>
                 <li><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
         </div>
-    </nav>
+        </nav>
 
-    <!-- Seção Início -->
-    <section id="inicio" class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title fade-in">Visibilidade para o talento, acessibilidade para o mundo.</h1>
-            <p class="hero-subtitle fade-in">Comunicação estratégica, projetos personalizados e marketing de resultado para quem vive o esporte e além.</p>
-            <a href="#servicos" class="cta-button slide-up">Conheça nossos serviços</a>
-        </div>
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-        </div>
-    </section>
-
-     <!-- Seção Comunicação -->
-     <section id="comunicacao" class="communication-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="hero-icon-wrapper" aria-hidden="true"><i class="fas fa-bullhorn"></i></div>
-                <h2 class="section-title">Comunicação Estratégica</h2>
-                <p class="section-subtitle">Unimos estratégia, criatividade e tecnologia para ampliar o impacto de atletas, equipes e projetos inclusivos no universo esportivo.</p>
+        <!-- Seção Início -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">Visibilidade para o talento, acessibilidade para o mundo.</h1>
+                <p class="hero-subtitle fade-in">Comunicação estratégica, projetos personalizados e marketing de
+                    resultado para quem vive o esporte e além.</p>
+                <a href="#servicos" class="cta-button slide-up">Conheça nossos serviços</a>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Gestão de Redes Sociais</h3>
-                    <p>Planejamento estratégico de conteúdo, identidade visual e relacionamento com o público digital.</p>
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+            </div>
+        </section>
+
+        <!-- Seção Comunicação -->
+        <section id="comunicacao" class="communication-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="hero-icon-wrapper" aria-hidden="true"><i class="fas fa-bullhorn"></i></div>
+                    <h2 class="section-title">Comunicação Estratégica</h2>
+                    <p class="section-subtitle">Unimos estratégia, criatividade e tecnologia para ampliar o impacto de
+                        atletas, equipes e projetos inclusivos no universo esportivo.</p>
                 </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-microphone"></i>
+
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Gestão de Redes Sociais</h3>
+                        <p>Planejamento estratégico de conteúdo, identidade visual e relacionamento com o público
+                            digital.</p>
                     </div>
-                    <h3>Assessoria de Imprensa</h3>
-                    <p>Conectamos marcas e atletas aos veículos de mídia, criando histórias que inspiram e engajam.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
+
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3>Assessoria de Imprensa</h3>
+                        <p>Conectamos marcas e atletas aos veículos de mídia, criando histórias que inspiram e engajam.
+                        </p>
                     </div>
-                    <h3>Branding Pessoal</h3>
-                    <p>Criação de marca, posicionamento e conteúdo para atletas que desejam se destacar online.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-book-open"></i>
+
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Branding Pessoal</h3>
+                        <p>Criação de marca, posicionamento e conteúdo para atletas que desejam se destacar online.</p>
                     </div>
-                    <h3>Storytelling Inclusivo</h3>
-                    <p>Narrativas que conectam o público com histórias reais e inspiradoras no esporte paralímpico.</p>
+
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Storytelling Inclusivo</h3>
+                        <p>Narrativas que conectam o público com histórias reais e inspiradoras no esporte paralímpico.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção Serviços -->
-    <section id="servicos" class="services-section">
-        <div class="container">
-            <div class="hero-icon-wrapper" aria-hidden="true"><i class="fas fa-gear"></i></div>
-            <div class="section-header">
-                <h2 class="section-title">Nossos Serviços</h2>
-                <p class="section-subtitle">Escolha o plano ideal para impulsionar sua presença digital no esporte inclusivo.</p>
-            </div>
-            
-            <div class="plans-grid" id="plansCarousel" aria-label="Planos">
-                <div class="plans-track" tabindex="0">
-                <div class="plan-card fade-in" data-plan="basico">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>Básico</h3>
-                    </div>
-                    <div class="plan-content">
-                        <p class="plan-description">Ideal para atletas iniciantes que desejam iniciar sua presença digital.</p>
-                        <div class="plan-target">
-                            <strong>Público-Alvo:</strong> Atletas em fase inicial de carreira
-                        </div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Criação e otimização de perfis nas redes sociais</li>
-                            <li><i class="fas fa-check"></i> 4 postagens mensais</li>
-                            <li><i class="fas fa-check"></i> Acompanhamento básico de engajamento</li>
-                            <li><i class="fas fa-check"></i> Relatórios mensais com dados principais</li>
-                        </ul>
-                        <p class="plan-pitch">Dê o primeiro passo para construir sua presença digital e destaque-se entre os iniciantes.</p>
-                        <button class="plan-button">Saiba mais</button>
+        <!-- Seção Benefícios Fiscais-->
+        <section id="beneficios-fiscais" class="fiscal-benefits-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="hero-icon-wrapper" aria-hidden="true"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h2 class="section-title">Benefícios Fiscais & Incentivos Legais</h2>
+                    <p class="section-subtitle">Maximizando valor para empresas e atletas através de incentivos fiscais
+                    </p>
+                </div>
+
+                <!-- Economia Destaque -->
+                <div class="fiscal-highlight fade-in">
+                    <div class="fiscal-highlight-content">
+                        <div class="fiscal-highlight-label">Economia Fiscal de até</div>
+                        <div class="fiscal-highlight-number">60%</div>
+                        <div class="fiscal-highlight-text">para empresas que investem no esporte paralímpico</div>
                     </div>
                 </div>
-                
-                <div class="plan-card featured fade-in" data-plan="profissional">
-                    <div class="plan-badge">Mais Popular</div>
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-chart-line"></i>
+
+                <!-- Grid Principal: Empresas vs Atletas -->
+                <div class="fiscal-dual-grid fade-in">
+                    <!-- Empresas -->
+                    <div class="fiscal-card fiscal-empresas">
+                        <div class="fiscal-card-header">
+                            <div class="fiscal-card-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>Para Empresas</h3>
                         </div>
-                        <h3>Profissional</h3>
+                        <div class="fiscal-card-body">
+                            <ul class="fiscal-benefits-list">
+                                <li><i class="fas fa-check-circle"></i> <strong>Lei de Incentivo ao Esporte:</strong>
+                                    Dedução de até 1% do IR</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>100% de retorno fiscal</strong> em
+                                    projetos aprovados</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Vantagens em licitações</strong>
+                                    públicas</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Certificação ESG</strong> superior</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Incentivos estaduais</strong> de ICMS
+                                </li>
+                            </ul>
+                            <div class="fiscal-example">
+                                <strong>💡 Exemplo Prático:</strong><br>
+                                Investimento de R$ 100.000 → Custo efetivo de R$ 40.000
+                            </div>
+                        </div>
                     </div>
-                    <div class="plan-content">
-                        <p class="plan-description">Voltado para atletas ativos em competições, que buscam visibilidade e análise de resultados.</p>
-                        <div class="plan-target">
-                            <strong>Público-Alvo:</strong> Atletas com histórico competitivo
+
+                    <!-- Atletas -->
+                    <div class="fiscal-card fiscal-atletas">
+                        <div class="fiscal-card-header">
+                            <div class="fiscal-card-icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <h3>Para Atletas Paralímpicos</h3>
                         </div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Gestão completa de redes sociais (até 2 plataformas)</li>
-                            <li><i class="fas fa-check"></i> 8 postagens mensais + stories semanais</li>
-                            <li><i class="fas fa-check"></i> Análise de engajamento com IA preditiva</li>
-                            <li><i class="fas fa-check"></i> Relatório de desempenho esportivo e digital</li>
-                            <li><i class="fas fa-check"></i> Consultoria de imagem</li>
-                        </ul>
-                        <p class="plan-pitch">Transforme seu desempenho em resultados online e conquiste novos patrocinadores.</p>
-                        <button class="plan-button">Saiba mais</button>
+                        <div class="fiscal-card-body">
+                            <ul class="fiscal-benefits-list">
+                                <li><i class="fas fa-check-circle"></i> <strong>Isenção total de IR</strong> sobre
+                                    prêmios e patrocínios</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Economia anual</strong> de até R$ 22.000
+                                </li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Veículos adaptados:</strong> Isenção de
+                                    IPI, ICMS, IPVA e IOF</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Deduções ilimitadas</strong> de despesas
+                                    médicas</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Saque do FGTS</strong> para equipamentos
+                                </li>
+                            </ul>
+                            <div class="fiscal-example">
+                                <strong>💡 Economia em Veículos:</strong><br>
+                                Até R$ 30.000 em isenções fiscais
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="plan-card fade-in" data-plan="premium">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-crown"></i>
+
+                <!-- Como a MovAccess Facilita -->
+                <div class="fiscal-process fade-in">
+                    <h3 class="fiscal-process-title">Como a MovAccess Facilita o Acesso</h3>
+                    <div class="fiscal-steps">
+                        <div class="fiscal-step">
+                            <div class="fiscal-step-number">1</div>
+                            <div class="fiscal-step-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h4>Educar</h4>
+                            <p>Webinars e conteúdo sobre direitos fiscais</p>
                         </div>
-                        <h3>Premium</h3>
-                    </div>
-                    <div class="plan-content">
-                        <p class="plan-description">Indicado para atletas de alto rendimento ou com patrocinadores.</p>
-                        <div class="plan-target">
-                            <strong>Público-Alvo:</strong> Atletas de elite e patrocinadores
+                        <div class="fiscal-step">
+                            <div class="fiscal-step-number">2</div>
+                            <div class="fiscal-step-icon"><i class="fas fa-handshake"></i></div>
+                            <h4>Conectar</h4>
+                            <p>Network com especialistas e contadores</p>
                         </div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Gestão de redes sociais (3 plataformas)</li>
-                            <li><i class="fas fa-check"></i> Produção de conteúdo profissional (foto/vídeo)</li>
-                            <li><i class="fas fa-check"></i> Monitoramento com IA (análise de sentimentos)</li>
-                            <li><i class="fas fa-check"></i> Relatórios detalhados</li>
-                            <li><i class="fas fa-check"></i> Planejamento estratégico e assessoria esportiva</li>
-                        </ul>
-                        <p class="plan-pitch">Aumente sua visibilidade e conecte-se com grandes marcas esportivas.</p>
-                        <button class="plan-button">Saiba mais</button>
+                        <div class="fiscal-step">
+                            <div class="fiscal-step-number">3</div>
+                            <div class="fiscal-step-icon"><i class="fas fa-file-contract"></i></div>
+                            <h4>Estruturar</h4>
+                            <p>Contratos otimizados fiscalmente</p>
+                        </div>
+                        <div class="fiscal-step">
+                            <div class="fiscal-step-number">4</div>
+                            <div class="fiscal-step-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <h4>Documentar</h4>
+                            <p>Suporte para Lei de Incentivo</p>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="plan-card corporate fade-in" data-plan="corporativo">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3>Corporativo</h3>
-                    </div>
-                    <div class="plan-content">
-                        <p class="plan-description">Soluções completas de marketing e IA para instituições, federações ou patrocinadores.</p>
-                        <div class="plan-target">
-                            <strong>Público-Alvo:</strong> Empresas e organizações esportivas
-                        </div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Campanhas de patrocínio com atletas</li>
-                            <li><i class="fas fa-check"></i> Dashboards comparativos</li>
-                            <li><i class="fas fa-check"></i> Consultoria em inclusão</li>
-                            <li><i class="fas fa-check"></i> Relatórios executivos personalizados</li>
-                            <li><i class="fas fa-check"></i> Suporte dedicado e consultoria estratégica</li>
-                        </ul>
-                        <p class="plan-pitch">Impulsione o marketing esportivo da sua organização com estratégias baseadas em IA.</p>
-                        <button class="plan-button corporate-btn">Saiba mais</button>
-                    </div>
-                </div> <!-- .plans-track -->
 
-                <button class="plans-nav plans-prev" aria-label="Anterior" disabled>&lt;</button>
-                <button class="plans-nav plans-next" aria-label="Próximo">&gt;</button>
-
-                <div class="plans-dots" aria-hidden="false"></div>
+                <!-- CTA Final -->
+                <div class="fiscal-cta fade-in">
+                    <h3>MovAccess = Catalisador de Valor 🚀</h3>
+                    <p>Plataforma que vai além da visibilidade: conectamos atletas e marcas de forma inteligente e
+                        fiscalmente otimizada</p>
+                    <a href="planos/beneficios-detalhados.html" class="cta-button-enhanced">
+                        Descubra seus benefícios
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- Seção Serviços -->
+        <section id="servicos" class="services-section">
+            <div class="container">
+                <div class="hero-icon-wrapper" aria-hidden="true"><i class="fas fa-gear"></i></div>
+                <div class="section-header">
+                    <h2 class="section-title">Nossos Serviços</h2>
+                    <p class="section-subtitle">Escolha o plano ideal para impulsionar sua presença digital no esporte
+                        inclusivo.</p>
+                </div>
 
-    <!-- Seção Notícias - layout idêntico à Comunicação -->
-    <section id="blog" class="blog-section">
-        <div class="container">
-            <div class="communication-hero fade-in">
-                <div class="hero-icon-wrapper" aria-hidden="true"><i class="fas fa-newspaper"></i></div>
-                <h2 class="communication-main-title">Notícias</h2>
-                <p class="communication-subtitle">Acompanhe histórias reais, projetos e resultados que impulsionam o esporte inclusivo.</p>
-            </div>
+                <div class="plans-grid" id="plansCarousel" aria-label="Planos">
+                    <div class="plans-track" tabindex="0">
+                        <div class="plan-card fade-in" data-plan="basico">
+                            <div class="plan-header">
+                                <div class="plan-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h3>Básico</h3>
+                            </div>
+                            <div class="plan-content">
+                                <p class="plan-description">Ideal para atletas iniciantes que desejam iniciar sua
+                                    presença digital.</p>
+                                <div class="plan-target">
+                                    <strong>Público-Alvo:</strong> Atletas em fase inicial de carreira
+                                </div>
+                                <ul class="plan-features">
+                                    <li><i class="fas fa-check"></i> Criação e otimização de perfis nas redes sociais
+                                    </li>
+                                    <li><i class="fas fa-check"></i> 4 postagens mensais</li>
+                                    <li><i class="fas fa-check"></i> Acompanhamento básico de engajamento</li>
+                                    <li><i class="fas fa-check"></i> Relatórios mensais com dados principais</li>
+                                </ul>
+                                <p class="plan-pitch">Dê o primeiro passo para construir sua presença digital e
+                                    destaque-se entre os iniciantes.</p>
+                                <button class="plan-button">Saiba mais</button>
+                            </div>
+                        </div>
 
-            <!-- Destaques Recentes -->
-            <div class="comms-highlights fade-in" aria-label="Destaques Recentes">
-                <article class="comms-highlight-card">
-                    <div class="comms-highlight-media highlight-media">
-                        <img data-src="img/atletismo.jpg" alt="Atletas em destaque" class="lazy" loading="lazy">
-                        <div class="media-overlay" aria-hidden="true"></div>
+                        <div class="plan-card featured fade-in" data-plan="profissional">
+                            <div class="plan-badge">Mais Popular</div>
+                            <div class="plan-header">
+                                <div class="plan-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3>Profissional</h3>
+                            </div>
+                            <div class="plan-content">
+                                <p class="plan-description">Voltado para atletas ativos em competições, que buscam
+                                    visibilidade e análise de resultados.</p>
+                                <div class="plan-target">
+                                    <strong>Público-Alvo:</strong> Atletas com histórico competitivo
+                                </div>
+                                <ul class="plan-features">
+                                    <li><i class="fas fa-check"></i> Gestão completa de redes sociais (até 2
+                                        plataformas)</li>
+                                    <li><i class="fas fa-check"></i> 8 postagens mensais + stories semanais</li>
+                                    <li><i class="fas fa-check"></i> Análise de engajamento com IA preditiva</li>
+                                    <li><i class="fas fa-check"></i> Relatório de desempenho esportivo e digital</li>
+                                    <li><i class="fas fa-check"></i> Consultoria de imagem</li>
+                                </ul>
+                                <p class="plan-pitch">Transforme seu desempenho em resultados online e conquiste novos
+                                    patrocinadores.</p>
+                                <button class="plan-button">Saiba mais</button>
+                            </div>
+                        </div>
+
+                        <div class="plan-card fade-in" data-plan="premium">
+                            <div class="plan-header">
+                                <div class="plan-icon">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <h3>Premium</h3>
+                            </div>
+                            <div class="plan-content">
+                                <p class="plan-description">Indicado para atletas de alto rendimento ou com
+                                    patrocinadores.</p>
+                                <div class="plan-target">
+                                    <strong>Público-Alvo:</strong> Atletas de elite e patrocinadores
+                                </div>
+                                <ul class="plan-features">
+                                    <li><i class="fas fa-check"></i> Gestão de redes sociais (3 plataformas)</li>
+                                    <li><i class="fas fa-check"></i> Produção de conteúdo profissional (foto/vídeo)</li>
+                                    <li><i class="fas fa-check"></i> Monitoramento com IA (análise de sentimentos)</li>
+                                    <li><i class="fas fa-check"></i> Relatórios detalhados</li>
+                                    <li><i class="fas fa-check"></i> Planejamento estratégico e assessoria esportiva
+                                    </li>
+                                </ul>
+                                <p class="plan-pitch">Aumente sua visibilidade e conecte-se com grandes marcas
+                                    esportivas.</p>
+                                <button class="plan-button">Saiba mais</button>
+                            </div>
+                        </div>
+
+                        <div class="plan-card corporate fade-in" data-plan="corporativo">
+                            <div class="plan-header">
+                                <div class="plan-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <h3>Corporativo</h3>
+                            </div>
+                            <div class="plan-content">
+                                <p class="plan-description">Soluções completas de marketing e IA para instituições,
+                                    federações ou patrocinadores.</p>
+                                <div class="plan-target">
+                                    <strong>Público-Alvo:</strong> Empresas e organizações esportivas
+                                </div>
+                                <ul class="plan-features">
+                                    <li><i class="fas fa-check"></i> Campanhas de patrocínio com atletas</li>
+                                    <li><i class="fas fa-check"></i> Dashboards comparativos</li>
+                                    <li><i class="fas fa-check"></i> Consultoria em inclusão</li>
+                                    <li><i class="fas fa-check"></i> Relatórios executivos personalizados</li>
+                                    <li><i class="fas fa-check"></i> Suporte dedicado e consultoria estratégica</li>
+                                </ul>
+                                <p class="plan-pitch">Impulsione o marketing esportivo da sua organização com
+                                    estratégias baseadas em IA.</p>
+                                <button class="plan-button corporate-btn">Saiba mais</button>
+                            </div>
+                        </div> <!-- .plans-track -->
+
+                        <button class="plans-nav plans-prev" aria-label="Anterior" disabled>&lt;</button>
+                        <button class="plans-nav plans-next" aria-label="Próximo">&gt;</button>
+
+                        <div class="plans-dots" aria-hidden="false"></div>
                     </div>
-                    <div class="comms-highlight-body">
-                        <div class="comms-highlight-title">Atletas em foco: novas campanhas</div>
-                        <p class="comms-highlight-desc">Campanhas colaborativas ampliam alcance, fortalecem marcas pessoais e abrem portas a patrocínios.</p>
-                        <button class="service-btn" type="button"><span>Saiba mais</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+        </section>
+
+
+        <!-- Seção Notícias - layout idêntico à Comunicação -->
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <div class="communication-hero fade-in">
+                    <div class="hero-icon-wrapper" aria-hidden="true"><i class="fas fa-newspaper"></i></div>
+                    <h2 class="communication-main-title">Notícias</h2>
+                    <p class="communication-subtitle">Acompanhe histórias reais, projetos e resultados que impulsionam o
+                        esporte inclusivo.</p>
+                </div>
+
+                <!-- Destaques Recentes -->
+                <div class="comms-highlights fade-in" aria-label="Destaques Recentes">
+                    <article class="comms-highlight-card">
+                        <div class="comms-highlight-media highlight-media">
+                            <img data-src="img/atletismo.jpg" alt="Atletas em destaque" class="lazy" loading="lazy">
+                            <div class="media-overlay" aria-hidden="true"></div>
+                        </div>
+                        <div class="comms-highlight-body">
+                            <div class="comms-highlight-title">Atletas em foco: novas campanhas</div>
+                            <p class="comms-highlight-desc">Campanhas colaborativas ampliam alcance, fortalecem marcas
+                                pessoais e abrem portas a patrocínios.</p>
+                            <button class="service-btn" type="button"><span>Saiba mais</span> <i
+                                    class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                        </div>
+                    </article>
+                    <article class="comms-highlight-card">
+                        <div class="comms-highlight-media highlight-media">
+                            <img data-src="img/judo.jpg" alt="Tecnologia no esporte" class="lazy" loading="lazy">
+                            <div class="media-overlay" aria-hidden="true"></div>
+                        </div>
+                        <div class="comms-highlight-body">
+                            <div class="comms-highlight-title">Tecnologia e inclusão</div>
+                            <p class="comms-highlight-desc">IA e análise de dados ajudam a criar conteúdo acessível,
+                                mensurável e de alto impacto.</p>
+                            <button class="service-btn" type="button"><span>Ler mais</span> <i
+                                    class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                        </div>
+                    </article>
+                    <article class="comms-highlight-card">
+                        <div class="comms-highlight-media highlight-media">
+                            <img data-src="img/tenis.jpeg" alt="Eventos esportivos" class="lazy" loading="lazy">
+                            <div class="media-overlay" aria-hidden="true"></div>
+                        </div>
+                        <div class="comms-highlight-body">
+                            <div class="comms-highlight-title">Eventos e oportunidades</div>
+                            <p class="comms-highlight-desc">Calendário de eventos traz networking, visibilidade e novas
+                                parcerias para atletas e marcas.</p>
+                            <button class="service-btn" type="button"><span>Ver detalhes</span> <i
+                                    class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="comms-controls fade-in">
+                    <input type="search" id="comms-search" placeholder="Buscar por título ou palavra-chave..."
+                        aria-label="Buscar comunicações" class="comms-search-input">
+                    <select id="comms-filter" aria-label="Filtrar por categoria" class="comms-filter-select">
+                        <option value="">Todas as categorias</option>
+                        <option value="noticias">Notícias</option>
+                        <option value="atualizacoes">Atualizações</option>
+                        <option value="informativos">Informativos</option>
+                    </select>
+                </div>
+
+                <!-- Categorias -->
+                <div class="comms-cats fade-in" role="tablist" aria-label="Categorias de comunicações">
+                    <button type="button" class="comms-cat-btn active" data-cat="">Todas</button>
+                    <button type="button" class="comms-cat-btn" data-cat="noticias">Notícias Internas</button>
+                    <button type="button" class="comms-cat-btn" data-cat="atualizacoes">Atualizações da Empresa</button>
+                    <button type="button" class="comms-cat-btn" data-cat="informativos">Comunicados Importantes</button>
+                    <button type="button" class="comms-cat-btn" data-cat="eventos">Eventos e Campanhas</button>
+                </div>
+
+                <article class="comms-featured fade-in comms-featured-article">
+                    <div class="comms-featured-badge">
+                        <i class="fas fa-star" aria-hidden="true"></i> Destaque
+                    </div>
+                    <div class="comms-featured-image">
+                        <i class="fas fa-newspaper" aria-hidden="true"></i>
+                    </div>
+                    <div class="comms-featured-content">
+                        <h3>Nova parceria amplia visibilidade de atletas paralímpicos</h3>
+                        <p>Acordo institucional apoia a produção de conteúdo acessível e o monitoramento de performance
+                            digital, ampliando narrativas e oportunidades.</p>
+                        <div class="comms-featured-meta">
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> 04/11/2025</span>
+                            <span><i class="fas fa-user" aria-hidden="true"></i> Equipe MovAccess</span>
+                            <span><i class="fas fa-tag" aria-hidden="true"></i> Notícias</span>
+                        </div>
+                        <button class="service-btn" type="button"><span>Ler mais</span> <i class="fas fa-arrow-right"
+                                aria-hidden="true"></i></button>
                     </div>
                 </article>
-                <article class="comms-highlight-card">
-                    <div class="comms-highlight-media highlight-media">
-                        <img data-src="img/judo.jpg" alt="Tecnologia no esporte" class="lazy" loading="lazy">
-                        <div class="media-overlay" aria-hidden="true"></div>
-                    </div>
-                    <div class="comms-highlight-body">
-                        <div class="comms-highlight-title">Tecnologia e inclusão</div>
-                        <p class="comms-highlight-desc">IA e análise de dados ajudam a criar conteúdo acessível, mensurável e de alto impacto.</p>
-                        <button class="service-btn" type="button"><span>Ler mais</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
-                    </div>
-                </article>
-                <article class="comms-highlight-card">
-                    <div class="comms-highlight-media highlight-media">
-                        <img data-src="img/tenis.jpeg" alt="Eventos esportivos" class="lazy" loading="lazy">
-                        <div class="media-overlay" aria-hidden="true"></div>
-                    </div>
-                    <div class="comms-highlight-body">
-                        <div class="comms-highlight-title">Eventos e oportunidades</div>
-                        <p class="comms-highlight-desc">Calendário de eventos traz networking, visibilidade e novas parcerias para atletas e marcas.</p>
-                        <button class="service-btn" type="button"><span>Ver detalhes</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
-                    </div>
-                </article>
-            </div>
 
-            <div class="comms-controls fade-in">
-                <input type="search" placeholder="Buscar por título ou palavra-chave..." aria-label="Buscar comunicações" style="padding:0.9rem 1.2rem;border:2px solid #e0e0e0;border-radius:12px;font-family:'Poppins',sans-serif;font-size:0.95rem;">
-                <select aria-label="Filtrar por categoria" style="padding:0.9rem 1.2rem;border:2px solid #e0e0e0;border-radius:12px;font-family:'Poppins',sans-serif;font-size:0.95rem;">
-                    <option value="">Todas as categorias</option>
-                    <option value="noticias">Notícias</option>
-                    <option value="atualizacoes">Atualizações</option>
-                    <option value="informativos">Informativos</option>
-                </select>
-            </div>
-
-            <!-- Categorias -->
-            <div class="comms-cats fade-in" role="tablist" aria-label="Categorias de comunicações">
-                <button type="button" class="comms-cat-btn active" data-cat="">Todas</button>
-                <button type="button" class="comms-cat-btn" data-cat="noticias">Notícias Internas</button>
-                <button type="button" class="comms-cat-btn" data-cat="atualizacoes">Atualizações da Empresa</button>
-                <button type="button" class="comms-cat-btn" data-cat="informativos">Comunicados Importantes</button>
-                <button type="button" class="comms-cat-btn" data-cat="eventos">Eventos e Campanhas</button>
-            </div>
-
-            <article class="comms-featured fade-in" style="display:grid;grid-template-columns:1.2fr 2fr;gap:1.5rem;align-items:center;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:20px;box-shadow:0 6px 20px rgba(0,0,0,0.06);padding:1.5rem;margin-bottom:2rem">
-                <div class="comms-featured-badge" style="display:inline-flex;align-items:center;gap:.5rem;color:#0066CC;font-weight:600;margin-bottom:.75rem"><i class="fas fa-star" aria-hidden="true"></i> Destaque</div>
-                <div style="grid-column:1/2;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg, rgba(0,102,204,.05) 0%, rgba(0,168,107,.05) 100%);border-radius:16px;height:160px">
-                    <i class="fas fa-newspaper" style="font-size:3rem;color:#0066CC" aria-hidden="true"></i>
-                </div>
-                <div style="grid-column:2/3">
-                    <h3 style="font-size:1.35rem;font-weight:700;color:#2a2a2a;line-height:1.4;margin-bottom:.5rem">Nova parceria amplia visibilidade de atletas paralímpicos</h3>
-                    <p style="color:#666;line-height:1.7;margin-bottom:.75rem">Acordo institucional apoia a produção de conteúdo acessível e o monitoramento de performance digital, ampliando narrativas e oportunidades.</p>
-                    <div style="display:flex;gap:1rem;color:#555;font-size:.9rem;margin-bottom:1rem">
-                        <span><i class="fas fa-calendar" aria-hidden="true"></i> 04/11/2025</span>
-                        <span><i class="fas fa-user" aria-hidden="true"></i> Equipe MovAccess</span>
-                        <span><i class="fas fa-tag" aria-hidden="true"></i> Notícias</span>
-                    </div>
-                    <button class="service-btn" type="button"><span>Ler mais</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
-                </div>
-            </article>
-
-            <!-- Lista de comunicações -->
-            <div class="comms-grid">
-                <article class="comms-card fade-in" data-category="noticias" style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);padding:1.25rem;display:flex;flex-direction:column;gap:.75rem">
-                    <h4 class="comms-title" style="font-size:1.1rem;font-weight:700;color:#2a2a2a">Campanha de inclusão ganha força nas redes</h4>
-                    <p class="comms-desc" style="color:#666;line-height:1.6">Série de conteúdos com atletas e especialistas aumenta o engajamento e promove conscientização.</p>
-                    <div class="comms-meta" style="display:flex;gap:1rem;color:#555;font-size:.9rem"><span><i class="fas fa-calendar" aria-hidden="true"></i> 03/11/2025</span><span><i class="fas fa-user" aria-hidden="true"></i> Comunicação</span></div>
-                    <button class="service-btn" type="button" style="margin-top:auto"><span>Ver detalhes</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
-                </article>
-
-                <article class="comms-card fade-in" data-category="atualizacoes" style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);padding:1.25rem;display:flex;flex-direction:column;gap:.75rem">
-                    <h4 class="comms-title" style="font-size:1.1rem;font-weight:700;color:#2a2a2a">Atualização no painel de métricas</h4>
-                    <p class="comms-desc" style="color:#666;line-height:1.6">Novo módulo compara campanhas por canal e sentimento, facilitando decisões em tempo real.</p>
-                    <div class="comms-meta" style="display:flex;gap:1rem;color:#555;font-size:.9rem"><span><i class="fas fa-calendar" aria-hidden="true"></i> 01/11/2025</span><span><i class="fas fa-user" aria-hidden="true"></i> Produto</span></div>
-                    <button class="service-btn" type="button" style="margin-top:auto"><span>Ver detalhes</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
-                </article>
-
-                <article class="comms-card fade-in" data-category="informativos" style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);padding:1.25rem;display:flex;flex-direction:column;gap:.75rem">
-                    <h4 class="comms-title" style="font-size:1.1rem;font-weight:700;color:#2a2a2a">Guia de boas práticas de acessibilidade</h4>
-                    <p class="comms-desc" style="color:#666;line-height:1.6">Material prático reúne diretrizes WCAG aplicadas ao esporte, com exemplos visuais.</p>
-                    <div class="comms-meta" style="display:flex;gap:1rem;color:#555;font-size:.9rem"><span><i class="fas fa-calendar" aria-hidden="true"></i> 28/10/2025</span><span><i class="fas fa-user" aria-hidden="true"></i> Conteúdo</span></div>
-                    <button class="service-btn" type="button" style="margin-top:auto"><span>Ver detalhes</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
-                </article>
-
-                <article class="comms-card fade-in" data-category="noticias" style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);padding:1.25rem;display:flex;flex-direction:column;gap:.75rem">
-                    <h4 class="comms-title" style="font-size:1.1rem;font-weight:700;color:#2a2a2a">Parcerias regionais em expansão</h4>
-                    <p class="comms-desc" style="color:#666;line-height:1.6">Iniciativas locais conectam clubes, ONGs e universidades para viabilizar projetos e eventos.</p>
-                    <div class="comms-meta" style="display:flex;gap:1rem;color:#555;font-size:.9rem"><span><i class="fas fa-calendar" aria-hidden="true"></i> 22/10/2025</span><span><i class="fas fa-user" aria-hidden="true"></i> Estratégia</span></div>
-                    <button class="service-btn" type="button" style="margin-top:auto"><span>Ver detalhes</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
-                </article>
-            </div>
-
-            <!-- Banner de informação -->
-            <div class="comms-banner fade-in">
-                <p><i class="fas fa-info-circle" aria-hidden="true" style="color:#0066CC"></i> Fique por dentro das últimas novidades da empresa!</p>
-                <a class="cta-button-enhanced" href="#blog">Ver mais notícias <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-
-            <!-- Próximos eventos -->
-            <aside class="comms-events fade-in" aria-label="Próximos eventos">
-                <div class="comms-events-title"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Próximos Eventos</div>
-                <ul class="comms-events-list">
-                    <li class="comms-event-item"><span class="comms-event-meta"><i class="fas fa-calendar" aria-hidden="true"></i> 12/11/2025</span> <a href="#" class="blog-link">Webinar: Inclusão no Digital</a></li>
-                    <li class="comms-event-item"><span class="comms-event-meta"><i class="fas fa-calendar" aria-hidden="true"></i> 25/11/2025</span> <a href="#" class="blog-link">Live: Estratégias de Engajamento</a></li>
-                    <li class="comms-event-item"><span class="comms-event-meta"><i class="fas fa-calendar" aria-hidden="true"></i> 05/12/2025</span> <a href="#" class="blog-link">Campanha de Fim de Ano</a></li>
-                </ul>
-            </aside>
-
-            <!-- Subscription removed per request -->
-
-            <div id="comms-empty" class="fade-in" style="display:none;text-align:center;color:#666;margin-top:1.5rem">Nenhuma comunicação encontrada.</div>
-
-            <div class="communication-cta fade-in">
-                <div class="cta-content">
-                    <h3 class="cta-title">Quer receber nossas atualizações?</h3>
-                    <p class="cta-description">Entre em contato e fique por dentro das próximas novidades e oportunidades.</p>
-                    <a class="cta-button-enhanced" href="#contato" aria-label="Ir para contato">Falar com a equipe <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Contato -->
-    <section id="contato" class="contact-section">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2 class="section-title">Entre em contato</h2>
-                    <p class="contact-subtitle">Entre em contato e descubra como podemos impulsionar o seu potencial.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>movaccess25@gmail.com</span>
+                <!-- Lista de comunicações -->
+                <div class="comms-grid">
+                    <article class="comms-card fade-in" data-category="noticias">
+                        <h4 class="comms-title">Campanha de inclusão ganha força nas redes</h4>
+                        <p class="comms-desc">Série de conteúdos com atletas e especialistas aumenta o engajamento e
+                            promove conscientização.</p>
+                        <div class="comms-meta">
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> 03/11/2025</span>
+                            <span><i class="fas fa-user" aria-hidden="true"></i> Comunicação</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>(21) 99999-9999</span>
+                        <button class="service-btn" type="button"><span>Ver detalhes</span> <i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                    </article>
+
+                    <article class="comms-card fade-in" data-category="atualizacoes">
+                        <h4 class="comms-title">Atualização no painel de métricas</h4>
+                        <p class="comms-desc">Novo módulo compara campanhas por canal e sentimento, facilitando decisões
+                            em tempo real.</p>
+                        <div class="comms-meta">
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> 01/11/2025</span>
+                            <span><i class="fas fa-user" aria-hidden="true"></i> Produto</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Rio de Janeiro, Brasil</span>
+                        <button class="service-btn" type="button"><span>Ver detalhes</span> <i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                    </article>
+
+                    <article class="comms-card fade-in" data-category="informativos">
+                        <h4 class="comms-title">Guia de boas práticas de acessibilidade</h4>
+                        <p class="comms-desc">Material prático reúne diretrizes WCAG aplicadas ao esporte, com exemplos
+                            visuais.</p>
+                        <div class="comms-meta">
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> 28/10/2025</span>
+                            <span><i class="fas fa-user" aria-hidden="true"></i> Conteúdo</span>
+                        </div>
+                        <button class="service-btn" type="button"><span>Ver detalhes</span> <i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                    </article>
+
+                    <article class="comms-card fade-in" data-category="noticias">
+                        <h4 class="comms-title">Parcerias regionais em expansão</h4>
+                        <p class="comms-desc">Iniciativas locais conectam clubes, ONGs e universidades para viabilizar
+                            projetos e eventos.</p>
+                        <div class="comms-meta">
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> 22/10/2025</span>
+                            <span><i class="fas fa-user" aria-hidden="true"></i> Estratégia</span>
+                        </div>
+                        <button class="service-btn" type="button"><span>Ver detalhes</span> <i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                    </article>
+                </div>
+
+                <!-- Banner de informação -->
+                <div class="comms-banner fade-in">
+                    <p><i class="fas fa-info-circle" aria-hidden="true"></i> Fique por dentro das últimas novidades da
+                        empresa!</p>
+                    <a class="cta-button-enhanced" href="#blog">Ver mais notícias <i class="fas fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </div>
+
+                <!-- Próximos eventos -->
+                <aside class="comms-events fade-in" aria-label="Próximos eventos">
+                    <div class="comms-events-title"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Próximos
+                        Eventos</div>
+                    <ul class="comms-events-list">
+                        <li class="comms-event-item"><span class="comms-event-meta"><i class="fas fa-calendar"
+                                    aria-hidden="true"></i> 12/11/2025</span> <a href="#" class="blog-link">Webinar:
+                                Inclusão no Digital</a></li>
+                        <li class="comms-event-item"><span class="comms-event-meta"><i class="fas fa-calendar"
+                                    aria-hidden="true"></i> 25/11/2025</span> <a href="#" class="blog-link">Live:
+                                Estratégias de Engajamento</a></li>
+                        <li class="comms-event-item"><span class="comms-event-meta"><i class="fas fa-calendar"
+                                    aria-hidden="true"></i> 05/12/2025</span> <a href="#" class="blog-link">Campanha de
+                                Fim de Ano</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Subscription removed per request -->
+
+                <div id="comms-empty" class="fade-in comms-empty-state">Nenhuma comunicação encontrada.</div>
+
+                <div class="communication-cta fade-in">
+                    <div class="cta-content">
+                        <h3 class="cta-title">Quer receber nossas atualizações?</h3>
+                        <p class="cta-description">Entre em contato e fique por dentro das próximas novidades e
+                            oportunidades.</p>
+                        <a class="cta-button-enhanced" href="#contato" aria-label="Ir para contato">Falar com a equipe
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="section-title">Entre em contato</h2>
+                        <p class="contact-subtitle">Entre em contato e descubra como podemos impulsionar o seu
+                            potencial.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>movaccess25@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(21) 99999-9999</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Rio de Janeiro, Brasil</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Instagram da MovAccess"><i
+                                    class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn da MovAccess"><i
+                                    class="fab fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="#" class="social-link" aria-label="YouTube da MovAccess"><i class="fab fa-youtube"
+                                    aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Instagram da MovAccess"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#" class="social-link" aria-label="LinkedIn da MovAccess"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                        <a href="#" class="social-link" aria-label="YouTube da MovAccess"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                    </div>
+
+                    <form class="contact-form fade-in">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Sua mensagem" rows="5"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Enviar mensagem</button>
+                    </form>
                 </div>
-                
-                <form class="contact-form fade-in">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+            </div>
+        </section>
+
+
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="img/logo.png" alt="MovAccess" loading="lazy" />
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Enviar mensagem</button>
-                </form>
+                    <p class="footer-text">© 2025 MovAccess | Comunicação e Tecnologia Esportiva Inclusiva</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- VLibras -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
             </div>
         </div>
-    </section>
 
-    <!-- Rodapé -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="img/logo.png" alt="MovAccess" loading="lazy" />
-                </div>
-                <p class="footer-text">© 2025 MovAccess | Comunicação e Tecnologia Esportiva Inclusiva</p>
-            </div>
-        </div>
-    </footer>
+        <script src="script.js"></script>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <script>
+            // Função para scroll suave até a seção de serviços quando há hash #servicos na URL
+            function scrollToServicos() {
+                const hash = window.location.hash;
+                if (hash === '#servicos') {
+                    const servicosSection = document.getElementById('servicos');
+                    if (servicosSection) {
+                        const navbar = document.getElementById('navbar');
+                        // Calcular a altura da navbar ou usar valor padrão (90px conforme CSS)
+                        const navbarHeight = navbar ? navbar.offsetHeight : 90;
 
-    <!-- VLibras -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
+                        // Calcular a posição exata considerando a navbar fixa
+                        const targetPosition = servicosSection.offsetTop - navbarHeight;
 
-    <script src="script.js"></script>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    <script>
-        // Função para scroll suave até a seção de serviços quando há hash #servicos na URL
-        function scrollToServicos() {
-            const hash = window.location.hash;
-            if (hash === '#servicos') {
-                const servicosSection = document.getElementById('servicos');
-                if (servicosSection) {
-                    const navbar = document.getElementById('navbar');
-                    // Calcular a altura da navbar ou usar valor padrão (90px conforme CSS)
-                    const navbarHeight = navbar ? navbar.offsetHeight : 90;
-                    
-                    // Calcular a posição exata considerando a navbar fixa
-                    const targetPosition = servicosSection.offsetTop - navbarHeight;
-                    
-                    // Fazer scroll suave até a posição calculada
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+                        // Fazer scroll suave até a posição calculada
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             }
-        }
 
-        // Executar quando a página carregar
-        function initScrollToServicos() {
-            // Executar após o DOM estar pronto
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => {
+            // Executar quando a página carregar
+            function initScrollToServicos() {
+                // Executar após o DOM estar pronto
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', () => {
+                        setTimeout(scrollToServicos, 200);
+                    });
+                } else {
+                    // DOM já está pronto, executar após um pequeno delay para garantir renderização
                     setTimeout(scrollToServicos, 200);
+                }
+
+                // Também executar quando tudo estiver carregado (CSS, imagens, etc)
+                window.addEventListener('load', () => {
+                    setTimeout(scrollToServicos, 100);
                 });
-            } else {
-                // DOM já está pronto, executar após um pequeno delay para garantir renderização
-                setTimeout(scrollToServicos, 200);
             }
+
+            initScrollToServicos();
+
+            // Também executar quando o hash mudar (caso o usuário navegue sem recarregar)
+            window.addEventListener('hashchange', scrollToServicos);
+        </script>
+
+<script>
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            const wasActive = item.classList.contains('active');
             
-            // Também executar quando tudo estiver carregado (CSS, imagens, etc)
-            window.addEventListener('load', () => {
-                setTimeout(scrollToServicos, 100);
-            });
-        }
-
-        initScrollToServicos();
-
-        // Também executar quando o hash mudar (caso o usuário navegue sem recarregar)
-        window.addEventListener('hashchange', scrollToServicos);
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+    
+    // Smooth scroll para navegação fiscal
+    document.querySelectorAll('.fiscal-nav-item').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                const navbar = document.getElementById('navbar');
+                const navbarHeight = navbar ? navbar.offsetHeight : 90;
+                const targetPosition = target.offsetTop - navbarHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
     </script>
+    
 </body>
+
 </html>

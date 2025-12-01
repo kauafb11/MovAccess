@@ -21,9 +21,14 @@
                     <img src="../img/logo.png" alt="MovAccess - Início" />
                 </a>
             </div>
+            <button class="plan-menu-toggle" id="planMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <a href="../index.html#servicos" class="btn-voltar-navbar" id="voltar-inicio">
                 <i class="fas fa-arrow-left"></i>
-                Voltar para página inicial
+                <span class="btn-text">Voltar para página inicial</span>
             </a>
         </div>
     </nav>
@@ -227,6 +232,39 @@
     </main>
 
     <script>
+        // Hamburger Menu Toggle
+        const planMenuToggle = document.getElementById('planMenuToggle');
+        const voltarBtn = document.getElementById('voltar-inicio');
+        
+        if (planMenuToggle && voltarBtn) {
+            planMenuToggle.addEventListener('click', () => {
+                planMenuToggle.classList.toggle('active');
+                voltarBtn.classList.toggle('active');
+                document.body.style.overflow = voltarBtn.classList.contains('active') ? 'hidden' : '';
+                planMenuToggle.setAttribute('aria-expanded', voltarBtn.classList.contains('active'));
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!planMenuToggle.contains(e.target) && !voltarBtn.contains(e.target)) {
+                    planMenuToggle.classList.remove('active');
+                    voltarBtn.classList.remove('active');
+                    document.body.style.overflow = '';
+                    planMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && voltarBtn.classList.contains('active')) {
+                    planMenuToggle.classList.remove('active');
+                    voltarBtn.classList.remove('active');
+                    document.body.style.overflow = '';
+                    planMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
         const reveals = document.querySelectorAll('.reveal');
         const observerOptions = {
             threshold: 0.1,
@@ -242,7 +280,6 @@
         reveals.forEach(reveal => observer.observe(reveal));
 
         // Botão Voltar para página inicial - Scroll suave até seção de serviços
-        const voltarBtn = document.getElementById('voltar-inicio');
         if (voltarBtn) {
             voltarBtn.addEventListener('click', (e) => {
                 e.preventDefault();

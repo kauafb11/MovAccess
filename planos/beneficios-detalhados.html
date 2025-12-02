@@ -101,33 +101,43 @@
                 </div>
             </div>
 
-            <div class="fiscal-example" style="max-width: 800px; margin: 2rem auto;">
-                <h4 style="margin-bottom: 1rem;">💡 Exemplo Prático - Empresa</h4>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr style="background: #f5f5f5;">
-                        <th style="padding: 0.75rem; text-align: left; border: 1px solid #ddd;">Item</th>
-                        <th style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">Valor</th>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Doação para projeto esportivo</td>
-                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 100.000</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Dedução do IR (100%)</td>
-                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd; color: #00A86B;">- R$ 100.000</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Dedução como despesa operacional (34%)</td>
-                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd; color: #00A86B;">- R$ 34.000</td>
-                    </tr>
-                    <tr style="background: #e8f5e9; font-weight: bold;">
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Custo Efetivo Real</td>
-                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 0 a R$ 40.000*</td>
-                    </tr>
-                </table>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #666;">
-                    *Dependendo da estrutura tributária e limites de dedução
-                </p>
+            <!-- Collapsible Example -->
+            <div class="collapsible-container" style="max-width: 800px; margin: 2rem auto;">
+                <div class="collapsible" id="fiscal-example-collapsible">
+                    <button class="collapsible-header" type="button" aria-expanded="false">
+                        <span class="collapsible-title">💡 Ver Exemplo Prático - Empresa</span>
+                        <i class="fas fa-chevron-down collapsible-icon"></i>
+                    </button>
+                    <div class="collapsible-content">
+                        <div class="collapsible-inner">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="background: #f5f5f5;">
+                                    <th style="padding: 0.75rem; text-align: left; border: 1px solid #ddd;">Item</th>
+                                    <th style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">Valor</th>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Doação para projeto esportivo</td>
+                                    <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 100.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Dedução do IR (100%)</td>
+                                    <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd; color: #00A86B;">- R$ 100.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Dedução como despesa operacional (34%)</td>
+                                    <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd; color: #00A86B;">- R$ 34.000</td>
+                                </tr>
+                                <tr style="background: #e8f5e9; font-weight: bold;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Custo Efetivo Real</td>
+                                    <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 0 a R$ 40.000*</td>
+                                </tr>
+                            </table>
+                            <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #666;">
+                                *Dependendo da estrutura tributária e limites de dedução
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -250,34 +260,44 @@
                 </div>
             </div>
 
-            <div class="fiscal-example" style="max-width: 700px; margin: 2rem auto;">
-                <h4 style="margin-bottom: 1rem;">💰 Economia Anual Típica - Atleta</h4>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr style="background: #f5f5f5;">
-                        <th style="padding: 0.75rem; text-align: left; border: 1px solid #ddd;">Benefício</th>
-                        <th style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">Economia</th>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Isenção IR sobre renda (R$ 10k/mês)</td>
-                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 22.000/ano</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Veículo adaptado (compra)</td>
-                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 30.000</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">IPVA anual (isento)</td>
-                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 2.500/ano</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Deduções médicas</td>
-                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">Variável</td>
-                    </tr>
-                    <tr style="background: #e8f5e9; font-weight: bold;">
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">Total Anual (sem veículo)</td>
-                        <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 24.500+</td>
-                    </tr>
-                </table>
+            <!-- Collapsible Example - Atleta -->
+            <div class="collapsible-container" style="max-width: 700px; margin: 2rem auto;">
+                <div class="collapsible" id="atleta-economia-collapsible">
+                    <button class="collapsible-header" type="button" aria-expanded="false">
+                        <span class="collapsible-title">💰 Ver Economia Anual Típica - Atleta</span>
+                        <i class="fas fa-chevron-down collapsible-icon"></i>
+                    </button>
+                    <div class="collapsible-content">
+                        <div class="collapsible-inner">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="background: #f5f5f5;">
+                                    <th style="padding: 0.75rem; text-align: left; border: 1px solid #ddd;">Benefício</th>
+                                    <th style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">Economia</th>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Isenção IR sobre renda (R$ 10k/mês)</td>
+                                    <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 22.000/ano</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Veículo adaptado (compra)</td>
+                                    <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 30.000</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">IPVA anual (isento)</td>
+                                    <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 2.500/ano</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Deduções médicas</td>
+                                    <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">Variável</td>
+                                </tr>
+                                <tr style="background: #e8f5e9; font-weight: bold;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Total Anual (sem veículo)</td>
+                                    <td style="padding: 0.75rem; text-align: right; border: 1px solid #ddd;">R$ 24.500+</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -377,62 +397,93 @@
         <section id="faq" class="plan-testimonials reveal">
             <h2 class="plan-section-title">❓ Perguntas Frequentes</h2>
             
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h4>Toda empresa pode usar a Lei de Incentivo ao Esporte?</h4>
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Empresas tributadas no <strong>lucro real</strong> podem deduzir até 1% do IR devido. Empresas no lucro presumido ou Simples Nacional não podem usar este benefício, mas podem usar outros incentivos estaduais e municipais.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h4>Atletas paralímpicos têm isenção automática de IR?</h4>
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim, conforme a <strong>Lei 13.166/2015</strong>, atletas paralímpicos têm isenção total sobre prêmios, patrocínios e rendimentos relacionados à sua atividade esportiva. É necessário comprovar a condição através de laudo médico e registro em federação.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h4>Quanto tempo leva para aprovar um projeto?</h4>
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>O prazo médio de aprovação no Ministério do Esporte é de <strong>60 a 90 dias</strong>. Projetos paralímpicos têm prioridade na fila de análise.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h4>A MovAccess cobra para ajudar no processo?</h4>
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                        </div>
-                        <div class="faq-answer">
-                        <p>Oferecemos <strong>consultoria básica gratuita</strong> para membros da plataforma. Para elaboração completa de projetos e acompanhamento jurídico, temos parceiros especializados com preços acessíveis.</p>
-                        </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="collapsible-container">
+                    <div class="collapsible">
+                        <button class="collapsible-header" type="button" aria-expanded="false">
+                            <h4>
                                 <i class="fas fa-question-circle"></i>
-                                <h4>Posso combinar diferentes incentivos fiscais?</h4>
-                                <i class="fas fa-chevron-down faq-toggle"></i>
+                                Toda empresa pode usar a Lei de Incentivo ao Esporte?
+                            </h4>
+                            <i class="fas fa-chevron-down collapsible-icon"></i>
+                        </button>
+                        <div class="collapsible-content">
+                            <div class="collapsible-inner">
+                                <p>Empresas tributadas no <strong>lucro real</strong> podem deduzir até 1% do IR devido. Empresas no lucro presumido ou Simples Nacional não podem usar este benefício, mas podem usar outros incentivos estaduais e municipais.</p>
                             </div>
-                            <div class="faq-answer">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible-container">
+                    <div class="collapsible">
+                        <button class="collapsible-header" type="button" aria-expanded="false">
+                            <h4>
+                                <i class="fas fa-question-circle"></i>
+                                Atletas paralímpicos têm isenção automática de IR?
+                            </h4>
+                            <i class="fas fa-chevron-down collapsible-icon"></i>
+                        </button>
+                        <div class="collapsible-content">
+                            <div class="collapsible-inner">
+                                <p>Sim, conforme a <strong>Lei 13.166/2015</strong>, atletas paralímpicos têm isenção total sobre prêmios, patrocínios e rendimentos relacionados à sua atividade esportiva. É necessário comprovar a condição através de laudo médico e registro em federação.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible-container">
+                    <div class="collapsible">
+                        <button class="collapsible-header" type="button" aria-expanded="false">
+                            <h4>
+                                <i class="fas fa-question-circle"></i>
+                                Quanto tempo leva para aprovar um projeto?
+                            </h4>
+                            <i class="fas fa-chevron-down collapsible-icon"></i>
+                        </button>
+                        <div class="collapsible-content">
+                            <div class="collapsible-inner">
+                                <p>O prazo médio de aprovação no Ministério do Esporte é de <strong>60 a 90 dias</strong>. Projetos paralímpicos têm prioridade na fila de análise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible-container">
+                    <div class="collapsible">
+                        <button class="collapsible-header" type="button" aria-expanded="false">
+                            <h4>
+                                <i class="fas fa-question-circle"></i>
+                                A MovAccess cobra para ajudar no processo?
+                            </h4>
+                            <i class="fas fa-chevron-down collapsible-icon"></i>
+                        </button>
+                        <div class="collapsible-content">
+                            <div class="collapsible-inner">
+                                <p>Oferecemos <strong>consultoria básica gratuita</strong> para membros da plataforma. Para elaboração completa de projetos e acompanhamento jurídico, temos parceiros especializados com preços acessíveis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible-container">
+                    <div class="collapsible">
+                        <button class="collapsible-header" type="button" aria-expanded="false">
+                            <h4>
+                                <i class="fas fa-question-circle"></i>
+                                Posso combinar diferentes incentivos fiscais?
+                            </h4>
+                            <i class="fas fa-chevron-down collapsible-icon"></i>
+                        </button>
+                        <div class="collapsible-content">
+                            <div class="collapsible-inner">
                                 <p><strong>Sim!</strong> É possível combinar Lei de Incentivo ao Esporte (federal) com incentivos estaduais de ICMS e municipais de ISS, maximizando ainda mais a economia fiscal.</p>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </div>
+        </section>
             
                 <!-- CTA Final -->
                 <section class="plan-cta-section reveal">
@@ -487,19 +538,6 @@
                 }, { threshold: 0.1 });
                 reveals.forEach(reveal => observer.observe(reveal));
             
-                // FAQ Toggle
-                document.querySelectorAll('.faq-question').forEach(question => {
-                    question.addEventListener('click', () => {
-                        const item = question.parentElement;
-                        const wasActive = item.classList.contains('active');
-                        
-                        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-                        
-                        if (!wasActive) {
-                            item.classList.add('active');
-                        }
-                    });
-                });
             
                 // Smooth scroll para índice
                 document.querySelectorAll('.indice-link').forEach(link => {
@@ -510,5 +548,43 @@
                             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         }
                     });
+                });
+
+                // Collapsible Toggle Functionality
+                const collapsibles = document.querySelectorAll('.collapsible');
+                
+                collapsibles.forEach(collapsible => {
+                    const header = collapsible.querySelector('.collapsible-header');
+                    const content = collapsible.querySelector('.collapsible-content');
+                    
+                    if (header && content) {
+                        // Initialize - set max-height to 0 for closed state
+                        if (!collapsible.classList.contains('active')) {
+                            content.style.maxHeight = '0px';
+                        }
+                        
+                        header.addEventListener('click', () => {
+                            const isActive = collapsible.classList.contains('active');
+                            
+                            if (isActive) {
+                                // Close
+                                collapsible.classList.remove('active');
+                                header.setAttribute('aria-expanded', 'false');
+                                content.style.maxHeight = '0px';
+                            } else {
+                                // Open
+                                collapsible.classList.add('active');
+                                header.setAttribute('aria-expanded', 'true');
+                                // Temporarily set to auto to get scrollHeight, then set to actual value
+                                content.style.maxHeight = 'none';
+                                const height = content.scrollHeight;
+                                content.style.maxHeight = '0px';
+                                // Force reflow
+                                void content.offsetHeight;
+                                // Now animate to full height
+                                content.style.maxHeight = height + 'px';
+                            }
+                        });
+                    }
                 });
             </script>

@@ -1256,6 +1256,16 @@ img {
         margin-bottom: 4rem;
     }
 
+    /* Specific layout for the athlete benefits page (#atletas)
+       Keep the four benefit cards in a 2x2 grid (2 columns x 2 rows)
+       regardless of larger desktop breakpoints. Mobile (<768px) will
+       naturally fall back to a single column due to the mobile-first rules. */
+    #atletas .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+        margin-bottom: 3rem;
+    }
+
     .benefit-card {
         padding: 2rem;
         border-radius: 20px;
@@ -1314,5 +1324,171 @@ img {
 
     .plan-cta-button {
         padding: 1.2rem 3rem;
+    }
+}
+
+/* ========================================
+   COLLAPSIBLE/ACCORDION COMPONENT
+   ======================================== */
+
+.collapsible-container {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.collapsible {
+    background: #ffffff;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.collapsible:hover {
+    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.15);
+}
+
+.collapsible-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 168, 107, 0.05) 100%);
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.collapsible-header:hover {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(0, 168, 107, 0.1) 100%);
+    color: #0066CC;
+}
+
+.collapsible-header:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+
+.collapsible-title {
+    flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* FAQ specific styles - h4 inside collapsible-header */
+.collapsible-header h4 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 600;
+    color: inherit;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.collapsible-header h4 i.fa-question-circle {
+    color: #0066CC;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.collapsible-icon {
+    font-size: 0.9rem;
+    color: #0066CC;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.collapsible.active .collapsible-icon {
+    transform: rotate(180deg);
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    position: relative;
+}
+
+.collapsible-inner {
+    padding: 1.5rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.collapsible.active .collapsible-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade-in animation for content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.collapsible.active .collapsible-inner {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .collapsible-header {
+        padding: 1rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .collapsible-icon {
+        font-size: 0.85rem;
+        margin-left: 0.75rem;
+    }
+
+    .collapsible-inner {
+        padding: 1.25rem;
+    }
+
+    .collapsible-container {
+        margin: 1.5rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .collapsible-header {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .collapsible-inner {
+        padding: 1rem;
+    }
+
+    /* Make table responsive on mobile */
+    .collapsible-inner table {
+        font-size: 0.85rem;
+    }
+
+    .collapsible-inner table th,
+    .collapsible-inner table td {
+        padding: 0.5rem !important;
     }
 }

@@ -1,0 +1,576 @@
+<!-- Modal de Análise com IA - Include em cada página de plano -->
+<div id="analysisModal" class="analysis-modal" aria-hidden="true" role="dialog" aria-labelledby="analysisModalTitle">
+    <div class="analysis-modal-backdrop" data-close="true"></div>
+    <div class="analysis-modal-dialog">
+        <button class="analysis-modal-close" aria-label="Fechar modal" data-close>
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="analysis-modal-body">
+            <h2 id="analysisModalTitle" class="analysis-modal-title">Análise com IA</h2>
+            
+            <div class="analysis-tabs">
+                <button class="analysis-tab-btn active" data-tab="ia">
+                    <i class="fas fa-brain"></i> Análise IA
+                </button>
+                <button class="analysis-tab-btn" data-tab="sentiment">
+                    <i class="fas fa-heart"></i> Sentimento
+                </button>
+                <button class="analysis-tab-btn" data-tab="trends">
+                    <i class="fas fa-chart-line"></i> Tendências
+                </button>
+            </div>
+
+            <!-- Tab 1: Processo IA -->
+            <div class="analysis-tab-content active" id="ia-tab">
+                <div class="analysis-process">
+                    <h3>Processo de Análise com IA</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h4>Onboarding do Atleta</h4>
+                            <p>Conhecemos você e seus objetivos através de uma reunião inicial.</p>
+                            <ul>
+                                <li>Reunião (30-45min)</li>
+                                <li>Mapeamento de objetivos</li>
+                                <li>Análise do público atual</li>
+                            </ul>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h4>Coleta de Dados</h4>
+                            <p>Conectamos nossa IA às suas plataformas e coletamos dados.</p>
+                            <ul>
+                                <li>Integração com redes sociais</li>
+                                <li>Análise de últimos 6 meses</li>
+                                <li>Mapeamento de horários ativos</li>
+                            </ul>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h4>Análise Preditiva</h4>
+                            <p>IA entra em ação analisando padrões e gerando recomendações.</p>
+                            <ul>
+                                <li>Análise de engajamento</li>
+                                <li>Previsão de horários</li>
+                                <li>Comparação com referências</li>
+                            </ul>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h4>Relatório Estratégico</h4>
+                            <p>Receba um relatório completo com recomendações personalizadas.</p>
+                            <ul>
+                                <li>Análise detalhada</li>
+                                <li>Roadmap de ações</li>
+                                <li>Oportunidades de crescimento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Análise de Sentimento -->
+            <div class="analysis-tab-content" id="sentiment-tab">
+                <div class="analysis-sentiment">
+                    <h3>Análise de Sentimento</h3>
+                    <p>Entenda como seu público reage ao seu conteúdo.</p>
+                    
+                    <div class="sentiment-chart">
+                        <div class="sentiment-item">
+                            <div class="sentiment-bar positive" style="width: 65%"></div>
+                            <span>Positivo (65%)</span>
+                        </div>
+                        <div class="sentiment-item">
+                            <div class="sentiment-bar neutral" style="width: 25%"></div>
+                            <span>Neutro (25%)</span>
+                        </div>
+                        <div class="sentiment-item">
+                            <div class="sentiment-bar negative" style="width: 10%"></div>
+                            <span>Negativo (10%)</span>
+                        </div>
+                    </div>
+
+                    <div class="sentiment-insights">
+                        <h4>Insights Principais</h4>
+                        <ul>
+                            <li><strong>Conteúdo mais engajador:</strong> Posts sobre competições e treinos</li>
+                            <li><strong>Horário ideal:</strong> 18h-22h (terças e quintas)</li>
+                            <li><strong>Público principal:</strong> Seguidores entre 18-35 anos</li>
+                            <li><strong>Crescimento previsto:</strong> +15-20% ao mês</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Tendências -->
+            <div class="analysis-tab-content" id="trends-tab">
+                <div class="analysis-trends">
+                    <h3>Tendências do Seu Nicho</h3>
+                    <p>Acompanhe as principais tendências e oportunidades do esporte.</p>
+                    
+                    <div class="trends-list">
+                        <div class="trend-item trending-up">
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="trend-info">
+                                <h4>#CompetiçõesParalímpicas</h4>
+                                <p>Crescimento de 45% em menções</p>
+                            </div>
+                        </div>
+                        <div class="trend-item trending-up">
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="trend-info">
+                                <h4>Conteúdo Behind-the-Scenes</h4>
+                                <p>Engajamento 3x maior que média</p>
+                            </div>
+                        </div>
+                        <div class="trend-item trending-stable">
+                            <i class="fas fa-minus"></i>
+                            <div class="trend-info">
+                                <h4>Parcerias com Marcas</h4>
+                                <p>Interesse estável, alto potencial</p>
+                            </div>
+                        </div>
+                        <div class="trend-item trending-up">
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="trend-info">
+                                <h4>Vídeos Curtos (Reels/TikTok)</h4>
+                                <p>Formato favorito do público +50%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-modal-footer">
+                <p class="analysis-note">
+                    <i class="fas fa-info-circle"></i>
+                    Esta análise é atualizada mensalmente com novos dados e recomendações.
+                </p>
+                <button class="analysis-modal-close-btn" data-close>Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Modal de Análise - Estilos */
+.analysis-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1rem;
+}
+
+.analysis-modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.analysis-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.analysis-modal-dialog {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 2;
+}
+
+.analysis-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.analysis-modal-close:hover {
+    color: #0066CC;
+    transform: rotate(90deg);
+}
+
+.analysis-modal-body {
+    padding: 2.5rem 2rem;
+}
+
+.analysis-modal-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Tabs */
+.analysis-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+    flex-wrap: wrap;
+}
+
+.analysis-tab-btn {
+    background: transparent;
+    border: none;
+    padding: 1rem;
+    font-weight: 600;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.analysis-tab-btn:hover {
+    color: #0066CC;
+}
+
+.analysis-tab-btn.active {
+    color: #0066CC;
+    border-bottom-color: #0066CC;
+}
+
+.analysis-tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.analysis-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Process Steps */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.process-step {
+    background: linear-gradient(135deg, #f0f7ff 0%, #f0fff0 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #0066CC;
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -12px;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.process-step h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.process-step p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0 1rem;
+}
+
+.process-step ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.process-step li {
+    font-size: 0.85rem;
+    color: #555;
+    padding: 0.3rem 0 0.3rem 1.5rem;
+    position: relative;
+}
+
+.process-step li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00A86B;
+    font-weight: bold;
+}
+
+/* Sentiment Analysis */
+.analysis-sentiment h3,
+.analysis-trends h3,
+.analysis-process h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.sentiment-chart {
+    margin: 2rem 0;
+}
+
+.sentiment-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sentiment-bar {
+    height: 20px;
+    border-radius: 10px;
+    min-width: 50px;
+    transition: all 0.3s ease;
+}
+
+.sentiment-bar.positive {
+    background: linear-gradient(135deg, #00A86B 0%, #00d77a 100%);
+}
+
+.sentiment-bar.neutral {
+    background: linear-gradient(135deg, #0066CC 0%, #0088DD 100%);
+}
+
+.sentiment-bar.negative {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8c8c 100%);
+}
+
+.sentiment-item span {
+    min-width: 120px;
+    font-weight: 600;
+    color: #333;
+}
+
+.sentiment-insights {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.sentiment-insights h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.sentiment-insights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sentiment-insights li {
+    padding: 0.5rem 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Trends */
+.trends-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.trend-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.trend-item.trending-up {
+    border-left-color: #00A86B;
+}
+
+.trend-item.trending-up i {
+    color: #00A86B;
+    font-size: 1.5rem;
+}
+
+.trend-item.trending-stable {
+    border-left-color: #0066CC;
+}
+
+.trend-item.trending-stable i {
+    color: #0066CC;
+    font-size: 1.5rem;
+}
+
+.trend-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 0.5rem;
+}
+
+.trend-info p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.analysis-modal-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.analysis-note {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.analysis-note i {
+    color: #0066CC;
+}
+
+.analysis-modal-close-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #0066CC 0%, #00A86B 100%);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.analysis-modal-close-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .analysis-modal-body {
+        padding: 1.5rem 1rem;
+    }
+
+    .analysis-modal-title {
+        font-size: 1.5rem;
+    }
+
+    .analysis-tabs {
+        gap: 0.5rem;
+    }
+
+    .analysis-tab-btn {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .analysis-modal-close {
+        right: 1rem;
+        top: 1rem;
+    }
+}
+</style>
+
+<script>
+// Modal de Análise - JavaScript
+(function() {
+    const modal = document.getElementById('analysisModal');
+    const backdrop = document.querySelector('.analysis-modal-backdrop');
+    const closeButtons = document.querySelectorAll('[data-close]');
+    const tabButtons = document.querySelectorAll('.analysis-tab-btn');
+    const tabContents = document.querySelectorAll('.analysis-tab-content');
+
+    // Funções de abertura/fechamento do modal
+    function openAnalysisModal() {
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeAnalysisModal() {
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    // Event listeners para fechar modal
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', closeAnalysisModal);
+    });
+
+    backdrop.addEventListener('click', closeAnalysisModal);
+
+    // Evento ESC para fechar
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+            closeAnalysisModal();
+        }
+    });
+
+    // Tab switching
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabName = btn.getAttribute('data-tab');
+            
+            // Remove classe active de todos os botões e conteúdos
+            tabButtons.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+            
+            // Adiciona classe active ao botão e conteúdo clicado
+            btn.classList.add('active');
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+        });
+    });
+
+    // Expor função global para abrir modal
+    window.openAnalysisModal = openAnalysisModal;
+})();
+</script>
